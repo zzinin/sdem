@@ -3,4 +3,20 @@
   <groupId>ShaddyM</groupId>
   <artifactId>ShaddyM</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+
+<dependencies>	
+ 
+
+
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.34.0</version>
+</dependency>
+ 
+ 
+ 
+</dependencies> 
+  
 </project>
