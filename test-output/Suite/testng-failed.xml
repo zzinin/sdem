@@ -3,15 +3,14 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <parameter name="os" value="Windows"/>
-    <parameter name="browser" value="Chrome"/>
+    <parameter name="browser" value="Firefox"/>
     <classes>
-      <class name="testCases.TC001_BookNowTest">
+      <class name="testCases.TC005_NegativeBookNowTest">
         <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
           <include name="verify_Reservation"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- testCases.TC001_BookNowTest -->
+      </class> <!-- testCases.TC005_NegativeBookNowTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

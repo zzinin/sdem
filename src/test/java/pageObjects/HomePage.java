@@ -6,6 +6,7 @@ import java.time.Month;
 import java.time.format.DateTimeFormatter;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,17 +32,17 @@ public class HomePage extends BasePage {
 	
 	
 	
-	@FindBy(xpath="//input[@value='06/07/2025']")
+	@FindBy(xpath="//*[@id=\"booking\"]/div/div/div/form/div/div[1]/div/div/input")
 	WebElement chkInDate;
 	
-	@FindBy(xpath="//input[@value='07/07/2025']")
+	@FindBy(xpath="//*[@id=\"booking\"]/div/div/div/form/div/div[2]/div/div/input")
 	WebElement chkOutDate;
 	
-	@FindBy(xpath="//button[normalize-space()='Check Availability']")
+	@FindBy(xpath="//*[@id=\"booking\"]/div/div/div/form/div/div[4]/button")
 	WebElement btnCheckAvailability;
 	
 	
-	@FindBy(xpath="//body[1]/div[1]/div[1]/div[1]/section[2]/div[1]/div[2]/div[1]/div[1]/div[3]/a[1]")
+	@FindBy(xpath="//*[@id=\"rooms\"]/div/div[2]/div[2]/div/div[3]/a")
 	WebElement btnBookNow;
 	
 	
@@ -68,7 +69,11 @@ public class HomePage extends BasePage {
 	@FindBy(xpath="//h2[normalize-space()='Booking Confirmed']")
 	WebElement txtBookingConfirmed;
 	
+	@FindBy(xpath="//*[@id=\"root-container\"]/div/div[2]/div/div[2]/div/div/p[2]/strong")
+	WebElement txtDateBooked;
 	
+	@FindBy(xpath="//*[@id=\"root-container\"]/div/div[2]/div/div[2]/div/div/a")
+	WebElement btnReturnHome;
 	
 	@FindBy(xpath="//input[@id='name']")
 	WebElement txtNameSubmit;
@@ -89,7 +94,8 @@ public class HomePage extends BasePage {
 	@FindBy(xpath="//button[normalize-space()='Submit']")
 	WebElement btnSubmit;
 	
-	
+	@FindBy(xpath="//div[@class='alert alert-danger']")
+	WebElement errMessage;
 	
 	
 	
@@ -129,7 +135,7 @@ public class HomePage extends BasePage {
 	
 	
 	
-/*public void pickCheckInDate(String checkInDate) {
+public void pickCheckInDate(String checkInDate) {
 		
 		
 		
@@ -156,7 +162,7 @@ public class HomePage extends BasePage {
 	     chkOutDate.sendKeys(checkOutDate);
 		  chkOutDate.sendKeys(Keys.TAB);
 		
-	}*/
+	}
 	 
 	public void  Datepicker1(String month,String day){
 	 driver.findElement(By.xpath("//*[@id=\"booking\"]/div/div/div/form/div/div[1]/div/div/input")).sendKeys(Keys.RETURN);
@@ -174,21 +180,21 @@ public class HomePage extends BasePage {
 	}
    public void chkAvailability() {
 		
-		btnCheckAvailability.click();
+		btnCheckAvailability.sendKeys(Keys.RETURN);
 		
 		
 	}
    
    public void bookNow() {
 	   
-	   btnBookNow.click();
+	   btnBookNow.sendKeys(Keys.RETURN);
    }
    
    
 	
     public void doReservation(){
 		
-		btnReserveNow.click();
+		btnReserveNow.sendKeys(Keys.RETURN);
 		
 		
 	}
@@ -220,7 +226,7 @@ public class HomePage extends BasePage {
 	
  public void FinalReservation(){
 		
-		btnFinalReserveNow.click();
+		btnFinalReserveNow.sendKeys(Keys.RETURN);
 		
 		
 	}
@@ -239,6 +245,22 @@ public class HomePage extends BasePage {
 	
  }
 
+ public String datesBooked() {
+	 
+	 
+	 return txtDateBooked.getText();
+	 
+	 
+ }
+ 
+ public void returnHome() {
+	 
+	 btnReturnHome.sendKeys(Keys.RETURN);
+	 
+ }
+ 
+ 
+ 
  
  public void setNameSubmit(String name) {
  	
@@ -304,5 +326,8 @@ public class HomePage extends BasePage {
  
  
  }
+ 
+ 
+
  
 }
