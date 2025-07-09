@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-09T00:08:48 BST" name="Suite" finished-at="2025-07-09T00:09:15 BST" duration-ms="26805">
+  <suite started-at="2025-07-09T13:28:32 BST" name="Suite" finished-at="2025-07-09T13:28:49 BST" duration-ms="17094">
     <groups>
     </groups>
-    <test started-at="2025-07-09T00:08:48 BST" name="Test" finished-at="2025-07-09T00:09:15 BST" duration-ms="26805">
-      <class name="testCases.TC005_NegativeBookNowTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC005_NegativeBookNowTest@7d20d0b]" started-at="2025-07-09T00:08:48 BST" name="setup" finished-at="2025-07-09T00:08:50 BST" duration-ms="2480" status="PASS">
+    <test started-at="2025-07-09T13:28:32 BST" name="Test" finished-at="2025-07-09T13:28:49 BST" duration-ms="17094">
+      <class name="testCases.TC004_SubmitDDT">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC004_SubmitDDT@77f1baf5]" started-at="2025-07-09T13:28:32 BST" name="setup" finished-at="2025-07-09T13:28:34 BST" duration-ms="2330" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,11 +23,104 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verify_Reservation()[pri:0, instance:testCases.TC005_NegativeBookNowTest@7d20d0b]" started-at="2025-07-09T00:08:50 BST" name="verify_Reservation" finished-at="2025-07-09T00:09:15 BST" duration-ms="24302" status="PASS">
+        <test-method signature="SendMessage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC004_SubmitDDT@77f1baf5]" started-at="2025-07-09T13:28:35 BST" name="SendMessage" data-provider="ContactData" finished-at="2025-07-09T13:28:39 BST" duration-ms="4528" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Rahul Ranjan"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[zzinin@yahoo.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA["7586137331"]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA["Test for the Subject "]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA["Test for Message in Contact Us Section"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_Reservation -->
-      </class> <!-- testCases.TC005_NegativeBookNowTest -->
+        </test-method> <!-- SendMessage -->
+        <test-method signature="SendMessage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC004_SubmitDDT@77f1baf5]" started-at="2025-07-09T13:28:39 BST" name="SendMessage" data-provider="ContactData" finished-at="2025-07-09T13:28:44 BST" duration-ms="4456" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Rahul Ranjan"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[zzinin@yahoo.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA["7586137331"]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA["Test for the Subject "]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA["Test for Message in Contact Us Section"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SendMessage -->
+        <test-method signature="SendMessage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC004_SubmitDDT@77f1baf5]" started-at="2025-07-09T13:28:44 BST" name="SendMessage" data-provider="ContactData" finished-at="2025-07-09T13:28:48 BST" duration-ms="4478" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Rahul Ranjan"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[zzinin@yahoo.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA["7586137331"]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA["Test for the Subject "]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA["Test for Message in Contact Us Section"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SendMessage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC004_SubmitDDT@77f1baf5]" started-at="2025-07-09T13:28:48 BST" name="tearDown" finished-at="2025-07-09T13:28:49 BST" duration-ms="520" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC004_SubmitDDT -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

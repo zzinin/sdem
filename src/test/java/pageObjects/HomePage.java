@@ -302,7 +302,7 @@ public void pickCheckInDate(String checkInDate) {
 
 		
 		 
-		 By confirmationLocator = By.xpath("//h3[normalize-space()='Thanks for getting in touch Rahul Ranjan!']");
+		 By confirmationLocator = By.xpath("//*[@id=\"contact\"]/div/div/div/div/div/p[1]");
 
 		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 WebElement confirmation = wait.until(

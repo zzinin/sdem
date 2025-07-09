@@ -65,14 +65,14 @@ public Properties p;
 	
 	
 	}
-/*   @AfterClass
+  @AfterClass
     void tearDown() {
     	
     	
     	driver.quit();
     	
     }
-*/
+
 	public  void focusOn(WebDriver driver, By locator) {
 
 	     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -112,5 +112,11 @@ public Properties p;
             DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		return date.format(DD_MM_YYYY);
     }
+	
+	
+	
+
+	
+	
 
 }

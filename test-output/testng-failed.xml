@@ -5,12 +5,13 @@
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="Firefox"/>
     <classes>
-      <class name="testCases.TC005_NegativeBookNowTest">
+      <class name="testCases.TC004_SubmitDDT">
         <methods>
-          <include name="verify_Reservation"/>
           <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="SendMessage" invocation-numbers="0 1 2"/>
         </methods>
-      </class> <!-- testCases.TC005_NegativeBookNowTest -->
+      </class> <!-- testCases.TC004_SubmitDDT -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
