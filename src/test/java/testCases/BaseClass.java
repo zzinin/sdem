@@ -21,7 +21,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
-
+//BaseClass provides setup, teardown, and utility methods that can be reused by other test classes.  
 
 public class BaseClass {
 	

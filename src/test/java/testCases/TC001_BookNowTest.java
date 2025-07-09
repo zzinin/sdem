@@ -10,6 +10,9 @@ import org.testng.annotations.Test;
 
 import pageObjects.HomePage;
 
+//This Tect case is used for booking of room end to end scenario
+
+
 public class TC001_BookNowTest extends BaseClass{
 	
 	@Test

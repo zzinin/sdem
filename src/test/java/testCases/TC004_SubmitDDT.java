@@ -7,6 +7,8 @@ import org.testng.annotations.Test;
 import pageObjects.HomePage;
 import utilities.DataProviders;
 
+// Excel-based data-driven test to verify input handling.
+
 public class TC004_SubmitDDT extends BaseClass{
 
 	

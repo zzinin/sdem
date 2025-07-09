@@ -15,16 +15,18 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
+//This class provides shared locators and methods that can
+//be accessed by other page classes after initialisation. 
 public class HomePage extends BasePage {
 	
 	
 
 	public HomePage(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 
+	//This will contain all the common Locaters on the Webpage to be referred by all the classes 
 	
 	@FindBy(xpath="//*[@id=\"root-container\"]/div/section[1]/div/div/div/a")
 	WebElement btnBookNow1;
@@ -126,7 +128,7 @@ public class HomePage extends BasePage {
 	
 	
 
-
+	//This will contain all the common methods and related actions on the Webpage to be used in any other classes
 	
 	
 	

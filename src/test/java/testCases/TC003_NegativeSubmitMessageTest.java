@@ -7,6 +7,8 @@ import org.testng.annotations.Test;
 
 import pageObjects.HomePage;
 
+//Negative test to ensure Submit Message validates required input fields correctly
+
 public class TC003_NegativeSubmitMessageTest extends BaseClass {
 	
 	 @Test
