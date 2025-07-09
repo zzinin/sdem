@@ -33,7 +33,7 @@ public class TC002_SubmitMessageTest extends BaseClass {
     	Thread.sleep(2000);
 	   } catch (Exception e)
 	   {
-		   Assert.fail();
+		   Assert.fail("Thows Exception:" +e.getMessage());
 	   }
     	
     }

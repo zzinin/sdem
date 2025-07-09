@@ -97,7 +97,10 @@ public class HomePage extends BasePage {
 	@FindBy(xpath="//div[@class='alert alert-danger']")
 	WebElement errMessage;
 	
+	//Check for Happy Days test
 	
+	@FindBy(xpath="//*[@id=\"root-container\"]/div/nav/div/a/span")
+	WebElement ShadyM;
 	
 	
 	
