@@ -1,12 +1,83 @@
-This project is designed to automate key functionalities of the Shady Meadows B&B website, including booking, message submission, and user experience (UX) validations.
-The automation framework is built using Selenium WebDriver, Java, Maven, and TestNG. It follows the Page Object Model (POM) design pattern to promote reusability, maintainability, and scalability.
-To support efficient collaboration and version control, GitHub is used for source management. Maven handles dependency management and project structure. The use of POM, along with modular test design, minimizes code duplication and enables easy integration and sharing across teams.
-Autoamtion Framework is divided into below packages :
-1. BasePage -This base page class holds the WebDriver instance,allowing all page objects to operate within the same browser session.
-             PageFactory.initElements populates the @FindBy fields automatically.stores the driver and initialise web elements
-2. TestCases -This section automated test cases script.For conveninece there are total 6 automated test cases covering: E2e automated test scenario for Booking functionality (TC001_BookNowTest), end to end Contact us form test scenario (TC002_SubmitMessageTest), Negative test to make sure that fields are being validated as per rules (TC003_NegativeSubmitMessageTest & TC004_NegativeBookNowTest), capability to accomodate input filed provided via xlsx file for multiple entry and can be used for negative scenarios as well(TC004SubmitDDT), Test to check that all the fields on the webpage are present and provising good user experience (TC006_HappyDaysTest)  
-3. Utilities -This package contains Dataproviders  and excel utility file, to data drive the test scenarios for various combination of input                 data
-4. Resources - This package contains config file which contains the variables to be resued in various test classes and scenarios
-5. TestData - This folder contains the excel file(Contact.xlsx) is being used to data drive 
-6. XML files - This are the xml files for the purpose of TestNG integration and further are of 2 types, "testng.xml" for test exeuction of all the test cases and other "parallelcrossbrowser.xml" for parallel test execution in cross browser type scenarios.
+
+# 🧪 Shady Meadows B&B – Test Automation Framework
+
+This project automates the key functionalities of the **Shady Meadows B&B** website, including:
+
+- 🛏️ Room Booking
+- 📩 Contact Form Submission
+- 🎯 UX/UI Element Verification
+
+The automation framework is implemented using "Selenium WebDriver", "Java", "Maven", and "TestNG", following the "Page Object Model (POM)" for modularity and scalability.
+
+---
+
+## 🧱 Framework Structure
+
+### 🔸 `base/`
+- Contains `BasePage.java`, which holds the shared WebDriver instance.
+- Uses `PageFactory.initElements()` to initialize elements across all page objects, enabling reuse within a single browser session.
+
+### 🔸 `testCases/`
+Automated test classes include:
+
+| Test Case Class   | Description |
+|------------------|-------------|
+| `TC001_BookNowTest` | Automates full room booking process |
+| `TC002_SubmitMessageTest` | Validates the contact form with valid input |
+| `TC003_NegativeSubmitMessageTest` | Tests field validation with incorrect contact form input |
+| `TC004_NegativeBookNowTest` | Negative test for invalid room booking data |
+| `TC004_SubmitDDT` | Data-driven contact form test using Excel input |
+| `TC006_HappyDaysTest` | UI verification for user-friendly field visibility |
+
+---
+
+### 🔸 `utilities/`
+- `ExcelUtil.java`: Apache POI-based utility to read/write `.xlsx` data.
+- `DataProviders.java`: Supplies test data to TestNG tests via `@DataProvider`.
+
+---
+
+### 🔸 `resources/`
+- Holds `config.properties`, containing reusable variables (like URLs, credentials, and driver configs).
+
+---
+
+### 🔸 `testData/`
+- Contains `Contact.xlsx`, which provides dynamic input data for data-driven tests.
+
+---
+
+### 🔸 `testng.xml` and `parallelcrossbrowser.xml`
+- `testng.xml`: Executes the full test suite.
+- `parallelcrossbrowser.xml`: Enables parallel test execution across multiple browsers.
+
+---
+
+## ⚙️ Tech Stack
+
+| Tool | Role |
+|------|------|
+| **Selenium WebDriver** | Web automation |
+| **Java** | Core programming language |
+| **TestNG** | Testing framework and reporting |
+| **Maven** | Build and dependency management |
+| **GitHub** | Version control and collaboration |
+| **Apache POI** | Excel data handling |
+
+---
+
+## ✅ Key Benefits
+
+- **POM Design**: Modular and scalable structure
+- **Reusable Codebase**: Minimal duplication across pages and tests
+- **Excel-Driven Testing**: External data integration via Apache POI
+- **Maven**: Clean project lifecycle and dependency control
+- **GitHub**: Collaboration-ready for team scaling
+- **Parallel Execution**: Support for cross-browser and multi-threaded testing
+
+---
+
+> 🎯 This framework is designed to be flexible, maintainable, and easy to extend for broader test coverage and team collaboration.
+
+
 
