@@ -106,8 +106,8 @@ Ensure the following tools are installed before setting up and running the test 
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/shady-meadows-automation.git
-   cd shady-meadows-automation
+   git clone https://github.com/zzinin/ShaddyM.git
+   
    ```
 
 2. **Open in Eclipse IDE**
@@ -120,10 +120,9 @@ Ensure the following tools are installed before setting up and running the test 
    * Modify `resources/config.properties` as needed:
 
      ```properties
-     baseUrl=https://shadymeadows.com
+     baseUrl=https://automationintesting.online/
      browser=chrome
-     timeout=10
-     excelPath=./testData/Contact.xlsx
+      excelPath=./testData/Contact.xlsx
      ```
 
 4. **Update Excel Test Data (if required)**
