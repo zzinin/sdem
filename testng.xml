@@ -11,7 +11,9 @@
    <!--<class name="testCases.TC004_SubmitDDT"/>-->
      <!--<class name="testCases.TC003_NegativeSubmitMessageTest"/>-->
      <!--<class name="testCases.TC005_NegativeBookNowTest"/>-->
-     <class name="testCases.TC006_HappyDaysTest"/>
+     <!--<class name="testCases.TC006_HappyDaysTest"/>-->
+     <class name="testCases.TC007_NonFunctionalTest"/>
+     <class name="testCases.TC008_NonFunctionalResizeTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

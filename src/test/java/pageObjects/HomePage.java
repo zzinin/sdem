@@ -105,8 +105,9 @@ public class HomePage extends BasePage {
 	WebElement ShadyM;
 	
 	
-	
-	
+	@FindBy(css = "footer") // or another stable element
+	public
+    WebElement footer;
 	
 	
 	
@@ -319,6 +320,13 @@ public void pickCheckInDate(String checkInDate) {
 		 
 	 
  }
+ 
+ public boolean isFooterDisplayed() {
+     return footer.isDisplayed();
+ }
+ 
+ 
+ 
  public void Scroll()  {
  
  WebElement focus = driver.findElement(By.xpath("//h3[@class='h4 mb-4 text-center']"));

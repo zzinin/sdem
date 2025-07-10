@@ -9,6 +9,7 @@ import java.util.Properties;
 import java.util.concurrent.ThreadLocalRandom;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -114,7 +115,11 @@ public Properties p;
     }
 	
 	
-	
+
+	public void resizeWindow(int width, int height) {
+	    driver.manage().window().setSize(new Dimension(width, height));
+	}
+
 
 	
 	
