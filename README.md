@@ -81,10 +81,7 @@ Automated test classes include:
 
 > 🎯 This framework is designed to be flexible, maintainable, and easy to extend for broader test coverage and team collaboration.
 
-************USER MANUAL for TEST EXCUTION ***************************
-Absolutely! Here's the **final version of the User Manual** with explicit instructions that test execution in **Eclipse IDE** should be done by **right-clicking on either `testng.xml` or `parallelcrossbrowser.xml`**.
 
----
 
 ## 🧑‍💻 User Manual
 
