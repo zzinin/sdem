@@ -28,6 +28,8 @@ Automated test classes include:
 | `TC004_NegativeBookNowTest` | Negative test for invalid room booking data |
 | `TC004_SubmitDDT` | Data-driven contact form test using Excel input |
 | `TC006_HappyDaysTest` | UI verification for user-friendly field visibility |
+| `TC007_NonFunctionalTest` | Non functional verification for page load time |
+| `TC008_NonFunctionalResizeTest` | Non functional verification for resize of page to Desktop view and Mobile view  |
 
 ---
 
@@ -79,10 +81,7 @@ Automated test classes include:
 
 > 🎯 This framework is designed to be flexible, maintainable, and easy to extend for broader test coverage and team collaboration.
 
-************USER MANUAL for TEST EXCUTION ***************************
-Absolutely! Here's the **final version of the User Manual** with explicit instructions that test execution in **Eclipse IDE** should be done by **right-clicking on either `testng.xml` or `parallelcrossbrowser.xml`**.
 
----
 
 ## 🧑‍💻 User Manual
 
@@ -178,6 +177,8 @@ This executes tests in **parallel threads** using multiple browsers, based on th
 │   ├── TC004_NegativeBookNowTest.java
 │   ├── TC005_SubmitDDT.java
 │   └── TC006_HappyDaysTest.java
+│   └── TC007_NonFunctionalTest.java
+│   └── TC008_NonFunctionalResizeTest.java   
 ├── utilities/
 │   ├── ExcelUtil.java
 │   └── DataProviders.java
