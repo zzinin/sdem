@@ -204,7 +204,6 @@ This executes tests in **parallel threads** using multiple browsers, based on th
 
 ---
 
-Let me know if you want this formatted into a downloadable `README.md` file, or want to include GitHub badges, CI setup steps, or GIF walkthroughs for beginners.
 
 **Disclaimer**: I Referred AI website, to present my test automation design concept in user friendly manner in read me file. 
 
