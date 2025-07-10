@@ -96,9 +96,8 @@ Ensure the following tools are installed before setting up and running the test 
 | Maven           | 3.6+                      | Manages dependencies and project build lifecycle |
 | Git             | Latest                    | For cloning the repository                       |
 | IDE             | IntelliJ IDEA / Eclipse   | Recommended for working with Java projects       |
-| Browser Drivers | ChromeDriver, GeckoDriver | Ensure compatibility with your browser version   |
 
-> 💡 **Tip:** Place browser drivers in your system’s `PATH` or configure their paths in `resources/config.properties`.
+> 💡 **Tip:** WebDriverManager automatically downloads the correct version of the WebDriver for the browser version installed on the system.
 
 ---
 
