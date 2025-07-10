@@ -28,6 +28,8 @@ Automated test classes include:
 | `TC004_NegativeBookNowTest` | Negative test for invalid room booking data |
 | `TC004_SubmitDDT` | Data-driven contact form test using Excel input |
 | `TC006_HappyDaysTest` | UI verification for user-friendly field visibility |
+| `TC007_NonFunctionalTest` | Non functional verification for page load time |
+| `TC008_NonFunctionalResizeTest` | Non functional verification for resize of page to Desktop view and Mobile view  |
 
 ---
 
@@ -178,6 +180,8 @@ This executes tests in **parallel threads** using multiple browsers, based on th
 │   ├── TC004_NegativeBookNowTest.java
 │   ├── TC005_SubmitDDT.java
 │   └── TC006_HappyDaysTest.java
+│   └── TC007_NonFunctionalTest.java
+│   └── TC008_NonFunctionalResizeTest.java   
 ├── utilities/
 │   ├── ExcelUtil.java
 │   └── DataProviders.java
