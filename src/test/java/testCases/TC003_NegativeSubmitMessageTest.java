@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import pageObjects.HomePage;
 
-//Negative test to ensure Submit Message validates required input fields correctly
+/*Negative test to ensure Submit Message validates required input fields correctly */
 
 public class TC003_NegativeSubmitMessageTest extends BaseClass {
 	
@@ -48,18 +48,9 @@ public class TC003_NegativeSubmitMessageTest extends BaseClass {
 	        	
 	        	
 	        }
-	      /*  if (driver.findElement(By.xpath("//div[@class='card shadow']//div[@class='card-body p-4']")).isDisplayed()) {
-	        	Assert.assertEquals(true, null);
-	        	hp.MessageConfirmation();
-	        	
-	        }else {
-	        	Assert.assertEquals(false, null);
-	        	
-	        }*/
-	    	
+	   
+	    /*Message confirmation screen handling post message is submitted successfully*/
 	        
-	        
-	    
 	        By cardBody = By.xpath("//div[@class='card shadow']//div[@class='card-body p-4']");
              Thread.sleep(2000);
 	      

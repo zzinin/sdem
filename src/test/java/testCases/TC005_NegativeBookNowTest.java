@@ -6,6 +6,8 @@ import org.testng.annotations.Test;
 
 import pageObjects.HomePage;
 
+/*This is Negative Book Now test to validate the mandatory field rules*/
+
 public class TC005_NegativeBookNowTest extends BaseClass {
 	@Test
 	 public void verify_Reservation() {

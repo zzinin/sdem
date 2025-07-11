@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import pageObjects.HomePage;
 
-//This test case checks if users are able to Send message to ShadyM B&B
+/*This test script checks if users are able to Send message to ShadyM B&B*/
 
 public class TC002_SubmitMessageTest extends BaseClass {
 	BaseClass bc= new BaseClass();

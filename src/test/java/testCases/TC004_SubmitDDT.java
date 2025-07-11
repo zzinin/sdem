@@ -7,7 +7,8 @@ import org.testng.annotations.Test;
 import pageObjects.HomePage;
 import utilities.DataProviders;
 
-// Excel-based data-driven test to verify input handling.
+/* Excel-based data-driven test to verify input handling.
+   This can be used to input various types of data in the send us form  */
 
 public class TC004_SubmitDDT extends BaseClass{
 

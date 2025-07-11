@@ -22,7 +22,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
-//BaseClass provides setup, teardown, and utility methods that can be reused by other test classes.  
+
+/*It handles setting up the WebDriver instance (ChromeDriver, FirefoxDriver, etc.) before tests run 
+ and closing it afterward. By initialising the driver in BaseClass, other test classes can inherit it,
+ avoiding redundant code.Centralizes Common Configurations.Supports Cross-Browser Testing.Enhances
+ Code Reusability and Clean Structure
+ * */  
 
 public class BaseClass {
 	
@@ -42,7 +47,7 @@ public Properties p;
 		
 		
 		
-		
+		//Accommodates any browser
 	
 		switch(br.toLowerCase()) {
 		
@@ -53,19 +58,15 @@ public Properties p;
 		}
 		
 		
-		//	driver = new ChromeDriver();
-	//	driver= new FirefoxDriver();
+		
+
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-		
-		driver.get(p.getProperty("url")); //Reading the Automation Testing url from config file 
+		driver.get(p.getProperty("url")); //Reading the "Automation Testing url" from config file 
 		driver.manage().window().maximize();
-	//	driver.switchTo().frame(0);
+
+	    }
 	
-	
-	
-	
-	}
   @AfterClass
     void tearDown() {
     	
@@ -74,31 +75,39 @@ public Properties p;
     	
     }
 
+  /* JavascriptExecutor interface is used to execute JavaScript code 
+  directly within the context of the browser. 
+  This can be helpful when native Selenium methods (like .click(), .sendKeys(), or scrolling actions)
+  do not work reliably due to certain web application behaviours, complex DOM structures, 
+  or dynamic JavaScript rendering.*/
+  
 	public  void focusOn(WebDriver driver, By locator) {
 
 	     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 	     WebElement target = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 
-	     // 1️⃣  Smooth‑scroll to the element (centers vertically)
-	     ((JavascriptExecutor) driver).executeScript(
+	    ((JavascriptExecutor) driver).executeScript(
 	             "arguments[0].scrollIntoView({behavior:'instant',block:'center',inline:'nearest'});",
 	             target);
 
-	     // 2️⃣  Give it keyboard focus as well (helpful for a11y / screenshots)
+	  
 	     ((JavascriptExecutor) driver).executeScript("arguments[0].focus();", target);
 
-	     // 3️⃣  Optional: move mouse for visual clarity
+	   
 	     new Actions(driver).moveToElement(target).perform();
-	 }
+	     }
 
 	
-	public String makeDate(int daysFromToday) {
-	    LocalDate date      = LocalDate.now().plusDays(daysFromToday);   // pick any offset you like
-	    DateTimeFormatter f = DateTimeFormatter.ofPattern("dd/MM/yyyy"); // dd = day, MM = month
+	/* Date formatter                    */
+	 public String makeDate(int daysFromToday) {
+	    LocalDate date      = LocalDate.now().plusDays(daysFromToday);   
+	    DateTimeFormatter f = DateTimeFormatter.ofPattern("dd/MM/yyyy"); 
 	    return date.format(f);
-	}
+	     }
 	 
-	public  String randomFutureDate(int minDaysFromToday, int maxDaysFromToday) {
+	 /* Method for randomFutureDate     */
+	 
+	 public  String randomFutureDate(int minDaysFromToday, int maxDaysFromToday) {
 	
         if (minDaysFromToday < 0 || maxDaysFromToday < minDaysFromToday) {
             throw new IllegalArgumentException("Check your day‑offset range");
@@ -112,16 +121,14 @@ public Properties p;
         final DateTimeFormatter DD_MM_YYYY =
             DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		return date.format(DD_MM_YYYY);
-    }
+        }
 	
-	
+	 /* Method for resize windows    */
 
 	public void resizeWindow(int width, int height) {
 	    driver.manage().window().setSize(new Dimension(width, height));
-	}
+	    }
 
 
 	
-	
-
-}
+   }

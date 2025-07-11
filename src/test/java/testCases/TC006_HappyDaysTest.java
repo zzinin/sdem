@@ -10,7 +10,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pageObjects.HomePage;
-//Exploratory test to verify the presence of webpage fields, ensuring a better user experience.
+
+/*Exploratory test to verify the presence of essential fields/Webelements on the webpage, ensuring
+  a better user experience.*/
 
 public class TC006_HappyDaysTest extends BaseClass {
 

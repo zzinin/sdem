@@ -5,13 +5,20 @@
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="Firefox"/>
     <classes>
-      <class name="testCases.TC006_HappyDaysTest">
+      <class name="testCases.TC004_SubmitDDT">
         <methods>
           <include name="setup"/>
-          <include name="verifyHeaderBrand"/>
           <include name="tearDown"/>
+          <include name="SendMessage" invocation-numbers="3"/>
         </methods>
-      </class> <!-- testCases.TC006_HappyDaysTest -->
+      </class> <!-- testCases.TC004_SubmitDDT -->
+      <class name="testCases.TC001_BookNowTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="verify_Reservation"/>
+        </methods>
+      </class> <!-- testCases.TC001_BookNowTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

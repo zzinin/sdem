@@ -5,6 +5,8 @@ import org.testng.annotations.Test;
 
 import pageObjects.HomePage;
 
+
+/*Non Functional test to check if resize of windo works for dektop and mobile devices */
 public class TC008_NonFunctionalResizeTest extends BaseClass {
 	@Test
     public void testHomePageResponsiveLayout() throws InterruptedException {

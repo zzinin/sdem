@@ -15,8 +15,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-//This class provides shared locators and methods that can
-//be accessed by other page classes after initialisation. 
+
+/*This class defines common locators and methods that can be accessed by other page classes upon initialisation.
+  The HomePage class contains WebElement locators and methods that interact with elements on the homepage.
+This provides a clean separation of UI structure from the test logic. */
+
 public class HomePage extends BasePage {
 	
 	
@@ -26,13 +29,10 @@ public class HomePage extends BasePage {
 		
 	}
 
-	//This will contain all the common Locaters on the Webpage to be referred by all the classes 
+	//All the WebElement locators are placed here from the website Shady Meadows 
 	
 	@FindBy(xpath="//*[@id=\"root-container\"]/div/section[1]/div/div/div/a")
 	WebElement btnBookNow1;
-	
-	
-	
 	
 	@FindBy(xpath="//*[@id=\"booking\"]/div/div/div/form/div/div[1]/div/div/input")
 	WebElement chkInDate;
@@ -46,8 +46,6 @@ public class HomePage extends BasePage {
 	
 	@FindBy(xpath="//*[@id=\"rooms\"]/div/div[2]/div[2]/div/div[3]/a")
 	WebElement btnBookNow;
-	
-	
 	
 	@FindBy(xpath="//button[@id='doReservation']")
 	WebElement btnReserveNow;
@@ -99,7 +97,7 @@ public class HomePage extends BasePage {
 	@FindBy(xpath="//div[@class='alert alert-danger']")
 	WebElement errMessage;
 	
-	//Check for Happy Days test
+	//Locators for Happy Days test
 	
 	@FindBy(xpath="//*[@id=\"root-container\"]/div/nav/div/a/span")
 	WebElement ShadyM;
@@ -110,26 +108,9 @@ public class HomePage extends BasePage {
     WebElement footer;
 	
 	
-	
-	
-	//Application error 
-	//*[@id="__next_error__"]/body/div/div/h2
-	//*[@id="__next_error__"]/body/div/div/h2
-	
-	//Booking confirmed message 
-	
-	//*[@id="root-container"]/div/div[2]/div/div[2]/div/div/h2
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	//This will contain all the common methods and related actions on the Webpage to be used in any other classes
+	/*Below section will contain all the methods and related actions
+	 *  on the element of Webpage to be used in any other classes
+	 */
 	
 	
 	
@@ -139,36 +120,22 @@ public class HomePage extends BasePage {
 	   }
 	
 	
-	
-	
-public void pickCheckInDate(String checkInDate) {
+     public void pickCheckInDate(String checkInDate) {
 		
 		
-		
-			 chkInDate.sendKeys(Keys.chord(Keys.CONTROL, "a")); // Select all
-			 chkInDate.sendKeys(Keys.DELETE);                   // Delete
+              chkInDate.sendKeys(Keys.chord(Keys.CONTROL, "a")); 
+			  chkInDate.sendKeys(Keys.DELETE);                   
 		      chkInDate.sendKeys(checkInDate);
 		
-		      
-		      
-		      
-		      
-		      
-		      
-		      
-		      
-		      
-		
-	}
+		       }
 	
    public void pickCheckOutDate(String checkOutDate) {
 		
-	     chkOutDate.sendKeys(Keys.chord(Keys.CONTROL, "a")); // Select all
-		 chkOutDate.sendKeys(Keys.DELETE);                   // Delete
-	     chkOutDate.sendKeys(checkOutDate);
-		  chkOutDate.sendKeys(Keys.TAB);
-		
-	}
+	          chkOutDate.sendKeys(Keys.chord(Keys.CONTROL, "a")); // Select all
+		      chkOutDate.sendKeys(Keys.DELETE);                   // Delete
+	          chkOutDate.sendKeys(checkOutDate);
+		      chkOutDate.sendKeys(Keys.TAB);
+	         }
 	 
 	public void  Datepicker1(String month,String day){
 	 driver.findElement(By.xpath("//*[@id=\"booking\"]/div/div/div/form/div/div[1]/div/div/input")).sendKeys(Keys.RETURN);
@@ -189,125 +156,114 @@ public void pickCheckInDate(String checkInDate) {
 		btnCheckAvailability.sendKeys(Keys.RETURN);
 		
 		
-	}
+	    }
    
    public void bookNow() {
 	   
 	   btnBookNow.sendKeys(Keys.RETURN);
-   }
+        }
    
    
 	
-    public void doReservation(){
+   public void doReservation(){
 		
 		btnReserveNow.sendKeys(Keys.RETURN);
 		
-		
-	}
+		}
     
     
 	 
-    public void setFirstName(String fname) {
+   public void setFirstName(String fname) {
     	
-    	txtFirstName.sendKeys(fname);;
+    	txtFirstName.sendKeys(fname);
     	
-    }
+        }
 	
-    public void setLastName(String lname) {
+   public void setLastName(String lname) {
     	
     	txtLastName.sendKeys(lname);;
-    }
+        }
    
     public void Email(String email) {
 	   
     	 txtEmail.sendKeys(email);
 	
-     }
+        }
     
     public void Phone( String phone) {
     	txtPhone.sendKeys(phone);
 	
+	    }
 	
-     }
-	
- public void FinalReservation(){
+    public void FinalReservation(){
 		
 		btnFinalReserveNow.sendKeys(Keys.RETURN);
 		
 		
-	}
+	    }
  
- 
- 
- public String chkConfirmationMessage() {
-	try {
+    public String chkConfirmationMessage() {
+	  try {
 		return (txtBookingConfirmed.getText());
 		
-	}catch (Exception e) 
-	{
+	      }catch (Exception e) 
+	      {
 		
-		return (e.getMessage());
-	}
+		return ("Throws exception:" +e.getMessage());
+	       }
 	
- }
+          }
 
- public String datesBooked() {
+     public String datesBooked() {
 	 
 	 
-	 return txtDateBooked.getText();
+	    return txtDateBooked.getText();
 	 
 	 
- }
+         }
  
- public void returnHome() {
+     public void returnHome() {
 	 
-	 btnReturnHome.sendKeys(Keys.RETURN);
+	     btnReturnHome.sendKeys(Keys.RETURN);
 	 
- }
- 
- 
+         }
  
  
- public void setNameSubmit(String name) {
+ 
+ 
+     public void setNameSubmit(String name) {
  	
- 	txtNameSubmit.sendKeys(name);
+ 	     txtNameSubmit.sendKeys(name);
  	
- }
+          }
 	
- public void setEmailSubmit(String email) {
+      public void setEmailSubmit(String email) {
 	 	
 	 	txtEmailSubmit.sendKeys(email);
 	 	
-	 }
+	      }
  
  
- public void Mobile( String phone) {
- 	txtPhoneSubmit.sendKeys(phone);
-	
-	
-  }
+      public void Mobile( String phone) {
+ 	     txtPhoneSubmit.sendKeys(phone);
+	      }
  
- public void setSubject( String subject) {
+      public void setSubject( String subject) {
 	 	txtSubjectSubmit.sendKeys(subject);
 		
-		
-	  }
+          }
  
- public void setMessage( String message) {
+      public void setMessage( String message) {
 	 	txtMessageSubmit.sendKeys(message);
 		
-		
-	  }
- public void submit() {
+	      }
+      public void submit() {
 	 	btnSubmit.sendKeys(Keys.RETURN);
 		
-		
-	  }
- public void MessageConfirmation()  {
+	      }
+      public void MessageConfirmation()  {
 	 
 
-		
-		 
 		 By confirmationLocator = By.xpath("//*[@id=\"contact\"]/div/div/div/div/div/p[1]");
 
 		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -316,31 +272,25 @@ public void pickCheckInDate(String checkInDate) {
 
 		 String message = confirmation.getText();
 		 System.out.println("Confirmation text: " + message);
-		 
-		 
-	 
- }
+		   
+          }
  
- public boolean isFooterDisplayed() {
-     return footer.isDisplayed();
- }
+      public boolean isFooterDisplayed() {
+            return footer.isDisplayed();
+          }
  
  
  
- public void Scroll()  {
+      public void Scroll()  {
  
- WebElement focus = driver.findElement(By.xpath("//h3[@class='h4 mb-4 text-center']"));
+         WebElement focus = driver.findElement(By.xpath("//h3[@class='h4 mb-4 text-center']"));
 
-	new Actions(driver)          // build an Actions chain
+	      new Actions(driver)          // build an Actions chain
 	        .scrollToElement(focus)   // wheel‑scroll until `pricing` is visible
 	        .perform(); 
- 
- 
- 
- 
- }
+            }
  
  
 
  
-}
+     }

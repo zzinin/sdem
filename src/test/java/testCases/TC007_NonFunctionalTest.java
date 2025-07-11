@@ -10,6 +10,8 @@ import org.testng.annotations.Test;
 
 import pageObjects.HomePage;
 
+/*Non Functional test to find the time it takes for page to load in milliseconds */
+
 public class TC007_NonFunctionalTest extends BaseClass {
  
 	@Test
