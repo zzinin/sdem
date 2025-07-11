@@ -26,7 +26,7 @@ Automated test classes include:
 | `TC002_SubmitMessageTest` | Validates the contact form with valid input |
 | `TC003_NegativeSubmitMessageTest` | Tests field validation with incorrect contact form input |
 | `TC004_NegativeBookNowTest` | Negative test for invalid room booking data |
-| `TC004_SubmitDDT` | Data-driven contact form test using Excel input |
+| `TC005_SubmitDDT` | Data-driven contact form test using Excel input |
 | `TC006_HappyDaysTest` | UI verification for user-friendly field visibility |
 | `TC007_NonFunctionalTest` | Non functional verification for page load time |
 | `TC008_NonFunctionalResizeTest` | Non functional verification for resize of page to Desktop view and Mobile view  |
