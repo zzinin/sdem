@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="11" passed="8" failed="2" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-11T14:21:38 BST" name="Suite" finished-at="2025-07-11T14:22:01 BST" duration-ms="22729">
+  <suite started-at="2025-07-22T18:55:30 BST" name="Suite" finished-at="2025-07-22T18:57:29 BST" duration-ms="118945">
     <groups>
     </groups>
-    <test started-at="2025-07-11T14:21:38 BST" name="Test" finished-at="2025-07-11T14:22:01 BST" duration-ms="22729">
-      <class name="testCases.TC001_BookNowTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC001_BookNowTest@41a2befb]" started-at="2025-07-11T14:21:38 BST" name="setup" finished-at="2025-07-11T14:21:41 BST" duration-ms="2797" status="PASS">
+    <test started-at="2025-07-22T18:55:30 BST" name="Test" finished-at="2025-07-22T18:57:29 BST" duration-ms="118945">
+      <class name="testCases.TC006_HappyDaysTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC006_HappyDaysTest@22fcf7ab]" started-at="2025-07-22T18:57:06 BST" name="setup" finished-at="2025-07-22T18:57:08 BST" duration-ms="2167" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,15 +23,535 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verify_Reservation()[pri:0, instance:testCases.TC001_BookNowTest@41a2befb]" started-at="2025-07-11T14:21:41 BST" name="verify_Reservation" finished-at="2025-07-11T14:22:00 BST" duration-ms="19343" status="PASS">
+        <test-method signature="verifyHeaderBrand()[pri:0, instance:testCases.TC006_HappyDaysTest@22fcf7ab]" started-at="2025-07-22T18:57:08 BST" name="verifyHeaderBrand" finished-at="2025-07-22T18:57:14 BST" duration-ms="6440" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeaderBrand -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC006_HappyDaysTest@22fcf7ab]" started-at="2025-07-22T18:57:14 BST" name="tearDown" finished-at="2025-07-22T18:57:15 BST" duration-ms="535" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC006_HappyDaysTest -->
+      <class name="testCases.TC008_NonFunctionalResizeTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC008_NonFunctionalResizeTest@63475ace]" started-at="2025-07-22T18:57:19 BST" name="setup" finished-at="2025-07-22T18:57:21 BST" duration-ms="1971" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testHomePageResponsiveLayout()[pri:0, instance:testCases.TC008_NonFunctionalResizeTest@63475ace]" started-at="2025-07-22T18:57:21 BST" name="testHomePageResponsiveLayout" finished-at="2025-07-22T18:57:28 BST" duration-ms="6947" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHomePageResponsiveLayout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC008_NonFunctionalResizeTest@63475ace]" started-at="2025-07-22T18:57:28 BST" name="tearDown" finished-at="2025-07-22T18:57:29 BST" duration-ms="546" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC008_NonFunctionalResizeTest -->
+      <class name="testCases.TC004_SubmitDDT">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC004_SubmitDDT@4009e306]" started-at="2025-07-22T18:55:53 BST" name="setup" finished-at="2025-07-22T18:55:57 BST" duration-ms="3781" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="SendMessage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC004_SubmitDDT@4009e306]" started-at="2025-07-22T18:55:58 BST" name="SendMessage" data-provider="ContactData" finished-at="2025-07-22T18:56:02 BST" duration-ms="4539" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Rahul Ranjan"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[zzinin@yahoo.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA["7586137331"]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA["Test for the Subject "]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA["Test for Message in Contact Us Section"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SendMessage -->
+        <test-method signature="SendMessage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC004_SubmitDDT@4009e306]" started-at="2025-07-22T18:56:02 BST" name="SendMessage" data-provider="ContactData" finished-at="2025-07-22T18:56:07 BST" duration-ms="4452" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Rahul Ranjan"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[zzinin@yahoo.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA["7586137331"]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA["Test for the Subject "]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA["Test for Message in Contact Us Section"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SendMessage -->
+        <test-method signature="SendMessage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC004_SubmitDDT@4009e306]" started-at="2025-07-22T18:56:07 BST" name="SendMessage" data-provider="ContactData" finished-at="2025-07-22T18:56:11 BST" duration-ms="4447" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Rahul Ranjan"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[zzinin@yahoo.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA["7586137331"]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA["Test for the Subject "]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA["Test for Message in Contact Us Section"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SendMessage -->
+        <test-method signature="SendMessage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC004_SubmitDDT@4009e306]" started-at="2025-07-22T18:56:11 BST" name="SendMessage" data-provider="ContactData" finished-at="2025-07-22T18:56:25 BST" duration-ms="14320" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ananaya]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[zzin@yahoo.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[12112]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1212]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[12121]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id="contact"]/div/div/div/div/div/p[1] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0, moz:accessibilityChecks: false, moz:buildID: 20250717180000, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 41092, moz:profile: C:\Users\Ananya\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 05ffbb0d-70a1-4934-a271-81358cd5905c]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id="contact"]/div/div/div/div/div/p[1] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0, moz:accessibilityChecks: false, moz:buildID: 20250717180000, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 41092, moz:profile: C:\Users\Ananya\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 05ffbb0d-70a1-4934-a271-81358cd5905c
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pageObjects.HomePage.MessageConfirmation(HomePage.java:270)
+at testCases.TC004_SubmitDDT.SendMessage(TC004_SubmitDDT.java:33)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SendMessage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC004_SubmitDDT@4009e306]" started-at="2025-07-22T18:56:25 BST" name="tearDown" finished-at="2025-07-22T18:56:26 BST" duration-ms="529" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC004_SubmitDDT -->
+      <class name="testCases.TC005_NegativeBookNowTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC005_NegativeBookNowTest@587e5365]" started-at="2025-07-22T18:56:39 BST" name="setup" finished-at="2025-07-22T18:56:41 BST" duration-ms="2086" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verify_Reservation()[pri:0, instance:testCases.TC005_NegativeBookNowTest@587e5365]" started-at="2025-07-22T18:56:41 BST" name="verify_Reservation" finished-at="2025-07-22T18:57:05 BST" duration-ms="23975" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Throws exception:Unable to locate element: //*[@id="root-container"]/div/div[2]/div/div[2]/div/div/p[2]/strong
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [63add23f-013e-4cc2-8aa7-92b1984958c1, findElement {value=//*[@id="root-container"]/div/div[2]/div/div[2]/div/div/p[2]/strong, using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0, moz:accessibilityChecks: false, moz:buildID: 20250717180000, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 37740, moz:profile: C:\Users\Ananya\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 63add23f-013e-4cc2-8aa7-92b1984958c1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Throws exception:Unable to locate element: //*[@id="root-container"]/div/div[2]/div/div[2]/div/div/p[2]/strong
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [63add23f-013e-4cc2-8aa7-92b1984958c1, findElement {value=//*[@id="root-container"]/div/div[2]/div/div[2]/div/div/p[2]/strong, using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0, moz:accessibilityChecks: false, moz:buildID: 20250717180000, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 37740, moz:profile: C:\Users\Ananya\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 63add23f-013e-4cc2-8aa7-92b1984958c1
+at org.testng.Assert.fail(Assert.java:111)
+at testCases.TC005_NegativeBookNowTest.verify_Reservation(TC005_NegativeBookNowTest.java:80)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_Reservation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC001_BookNowTest@41a2befb]" started-at="2025-07-11T14:22:00 BST" name="tearDown" finished-at="2025-07-11T14:22:01 BST" duration-ms="561" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC005_NegativeBookNowTest@587e5365]" started-at="2025-07-22T18:57:05 BST" name="tearDown" finished-at="2025-07-22T18:57:06 BST" duration-ms="522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC005_NegativeBookNowTest -->
+      <class name="testCases.TC001_BookNowTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC001_BookNowTest@6200f9cb]" started-at="2025-07-22T18:55:30 BST" name="setup" finished-at="2025-07-22T18:55:33 BST" duration-ms="2857" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verify_Reservation()[pri:0, instance:testCases.TC001_BookNowTest@6200f9cb]" started-at="2025-07-22T18:55:33 BST" name="verify_Reservation" finished-at="2025-07-22T18:55:52 BST" duration-ms="19050" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Reservation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC001_BookNowTest@6200f9cb]" started-at="2025-07-22T18:55:52 BST" name="tearDown" finished-at="2025-07-22T18:55:52 BST" duration-ms="526" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases.TC001_BookNowTest -->
+      <class name="testCases.TC002_SubmitMessageTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC002_SubmitMessageTest@7dc0f706]" started-at="2025-07-22T18:55:52 BST" name="setup" finished-at="2025-07-22T18:55:53 BST" duration-ms="349" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Process unexpectedly closed with status 0 
+Host info: host: 'AA', ip: '192.168.1.155'
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:firefoxOptions: {binary: C:\Program Files\Mozilla Fi..., prefs: {remote.active-protocols: 1}}}]}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Process unexpectedly closed with status 0 
+Host info: host: 'AA', ip: '192.168.1.155'
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:firefoxOptions: {binary: C:\Program Files\Mozilla Fi..., prefs: {remote.active-protocols: 1}}}]}]
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:173)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:142)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:137)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:119)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:114)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:99)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:89)
+at testCases.BaseClass.setup(BaseClass.java:55)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verify_Reservation()[pri:0, instance:testCases.TC002_SubmitMessageTest@7dc0f706]" started-at="2025-07-22T18:55:53 BST" name="verify_Reservation" finished-at="2025-07-22T18:55:53 BST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Process unexpectedly closed with status 0 
+Host info: host: 'AA', ip: '192.168.1.155'
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:firefoxOptions: {binary: C:\Program Files\Mozilla Fi..., prefs: {remote.active-protocols: 1}}}]}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Process unexpectedly closed with status 0 
+Host info: host: 'AA', ip: '192.168.1.155'
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:firefoxOptions: {binary: C:\Program Files\Mozilla Fi..., prefs: {remote.active-protocols: 1}}}]}]
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:173)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:142)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:137)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:119)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:114)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:99)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:89)
+at testCases.BaseClass.setup(BaseClass.java:55)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Reservation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC002_SubmitMessageTest@7dc0f706]" started-at="2025-07-22T18:55:53 BST" name="tearDown" finished-at="2025-07-22T18:55:53 BST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC002_SubmitMessageTest -->
+      <class name="testCases.TC007_NonFunctionalTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC007_NonFunctionalTest@2de23121]" started-at="2025-07-22T18:57:15 BST" name="setup" finished-at="2025-07-22T18:57:17 BST" duration-ms="2021" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyPageLoadTimeUnder3Seconds()[pri:0, instance:testCases.TC007_NonFunctionalTest@2de23121]" started-at="2025-07-22T18:57:17 BST" name="verifyPageLoadTimeUnder3Seconds" finished-at="2025-07-22T18:57:19 BST" duration-ms="2190" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPageLoadTimeUnder3Seconds -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC007_NonFunctionalTest@2de23121]" started-at="2025-07-22T18:57:19 BST" name="tearDown" finished-at="2025-07-22T18:57:19 BST" duration-ms="573" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC007_NonFunctionalTest -->
+      <class name="testCases.TC003_NegativeSubmitMessageTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC003_NegativeSubmitMessageTest@43c1b556]" started-at="2025-07-22T18:56:26 BST" name="setup" finished-at="2025-07-22T18:56:28 BST" duration-ms="2214" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="NegativeSubmit()[pri:0, instance:testCases.TC003_NegativeSubmitMessageTest@43c1b556]" started-at="2025-07-22T18:56:28 BST" name="NegativeSubmit" finished-at="2025-07-22T18:56:38 BST" duration-ms="9821" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NegativeSubmit -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC003_NegativeSubmitMessageTest@43c1b556]" started-at="2025-07-22T18:56:38 BST" name="tearDown" finished-at="2025-07-22T18:56:39 BST" duration-ms="936" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC003_NegativeSubmitMessageTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
