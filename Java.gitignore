@@ -25,6 +25,7 @@ replay_pid*
 
 # Ignore test output directories
 /test-output/
+test-output/
 /results/
 /reports/
 
