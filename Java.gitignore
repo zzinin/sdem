@@ -53,6 +53,7 @@ replay_pid*
 # Maven / Gradle build output
 /target/
 /build/
+target/
 
 # Environment and configuration
 .env
