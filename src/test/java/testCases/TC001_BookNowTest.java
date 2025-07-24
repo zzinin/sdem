@@ -32,6 +32,7 @@ public class TC001_BookNowTest extends BaseClass{
         bc.focusOn(driver, By.xpath("//*[@id=\"booking\"]/div/div/div/form/div/div[4]/button"));
     	Thread.sleep(4000);
     	hp.chkAvailability();
+   //Room Selection is done below 
     	hp.bookNow();
     	Thread.sleep(3000);
     	hp.doReservation();
@@ -50,10 +51,10 @@ public class TC001_BookNowTest extends BaseClass{
     	
     	bc.focusOn(driver, By.xpath("//*[@id=\"root-container\"]/div/div[2]/div/div[2]/div/div/h2"));
     	Thread.sleep(2000);
-    	hp.returnHome();
+    	
     	String ConfirmMessage= hp.chkConfirmationMessage();
     	Assert.assertEquals(ConfirmMessage,"Booking Confirmed");
-    	
+    	hp.returnHome();
     	} catch (Exception e) 
     	{
     	  Assert.fail("Throws exception TC001:" +e.getMessage());	

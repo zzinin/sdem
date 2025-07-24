@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -47,6 +48,16 @@ public class HomePage extends BasePage {
 	@FindBy(xpath="//*[@id=\"rooms\"]/div/div[2]/div[2]/div/div[3]/a")
 	WebElement btnBookNow;
 	
+	
+	@FindBy(xpath="//*[@id=\"rooms\"]/div/div[2]/div[1]/div/div[3]/a")
+	WebElement btnSingleRoom;
+	
+	@FindBy(xpath="//*[@id=\"rooms\"]/div/div[2]/div[2]/div/div[3]/a")
+	WebElement btnDoubleRoom;
+	
+	@FindBy(xpath="//*[@id=\"rooms\"]/div/div[2]/div[3]/div/div[3]/a")
+	WebElement btnSuiteRoom;
+	
 	@FindBy(xpath="//button[@id='doReservation']")
 	WebElement btnReserveNow;
 	
@@ -66,7 +77,7 @@ public class HomePage extends BasePage {
 	@FindBy(xpath="//button[normalize-space()='Reserve Now']")
 	WebElement btnFinalReserveNow;
 	
-	@FindBy(xpath="//h2[normalize-space()='Booking Confirmed']")
+	@FindBy(xpath="//*[@id=\"root-container\"]/div/div[2]/div/div[2]/div/div/h2")
 	WebElement txtBookingConfirmed;
 	
 	@FindBy(xpath="//*[@id=\"root-container\"]/div/div[2]/div/div[2]/div/div/p[2]/strong")
@@ -162,6 +173,40 @@ public class HomePage extends BasePage {
 	   
 	   btnBookNow.sendKeys(Keys.RETURN);
         }
+   
+   public void roomSelect() {
+      
+	   
+	   Scanner scanner= new Scanner(System.in);
+	   
+      System.out.print("Enter your room choice (Single, Double, Suite):");
+      String choice= scanner.nextLine();
+	   
+      switch (choice) {
+    	  
+      case "Single":
+    	  System.out.print("You selected Single room.");
+    	  btnSingleRoom.sendKeys(Keys.RETURN);
+    	  break;
+    	  
+      case "Double":
+    	  System.out.print("You selected Double room.");
+    	  btnDoubleRoom.sendKeys(Keys.RETURN);
+    	  break;
+    	  
+      case "Suite":
+    	  System.out.print("You selected Suite room.");
+    	  btnSuiteRoom.sendKeys(Keys.RETURN);
+    	  break;
+    	  
+      default:
+    	  System.out.print("Invalid choice. Please enter Single, Double or Suite.");
+           break;    	  
+      }
+      
+      scanner.close();
+      }
+	   
    
    
 	

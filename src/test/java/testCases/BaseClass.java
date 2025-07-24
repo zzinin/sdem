@@ -67,14 +67,14 @@ public Properties p;
 
 	    }
 	
-  @AfterClass
+/*  @AfterClass
     void tearDown() {
     	
     	
     	driver.quit();
     	
     }
-
+*/
   /* JavascriptExecutor interface is used to execute JavaScript code 
   directly within the context of the browser. 
   This can be helpful when native Selenium methods (like .click(), .sendKeys(), or scrolling actions)
