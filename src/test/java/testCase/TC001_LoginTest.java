@@ -57,15 +57,17 @@ import org.testng.annotations.Test;
 	        } catch (Exception e) {
 	            // If no error, assume login success
 	            Assert.assertTrue(driver.getCurrentUrl().contains("inventory"), "Login failed for: " + userid);
-	            driver.findElement(By.xpath("//button[@id='react-burger-menu-btn']")).click();
+	        } finally
+	            {driver.findElement(By.xpath("//button[@id='react-burger-menu-btn']")).click();
 	            driver.findElement(By.xpath("//a[@id='logout_sidebar_link']")).click();
 	        }
+		}
 			
 
 			
 	}
 		
-	}
+	
 
 
 

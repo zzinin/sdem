@@ -25,8 +25,14 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 /*It handles setting up the WebDriver instance (ChromeDriver, FirefoxDriver, etc.) before tests run 
  and closing it afterward. By initialising the driver in BaseClass, other test classes can inherit it,
@@ -36,10 +42,25 @@ import org.testng.annotations.Parameters;
 
 public class BaseClass {
 	
+	protected static ExtentReports extent;
+    protected static ExtentTest test;	
 public WebDriver driver;
 public Properties p;
 	
-	
+public static void initReport() {
+    ExtentSparkReporter spark = new ExtentSparkReporter("target/ExtentReport.html");
+    extent = new ExtentReports();
+    extent.attachReporter(spark);
+}
+
+@BeforeSuite
+public void beforeSuite() {
+    initReport();
+}
+
+
+
+
 	@Parameters({"os","browser"})
 	@BeforeClass
 	void setup(String os, String br) throws IOException {
@@ -93,6 +114,11 @@ public Properties p;
 
 	    }
 	
+	
+	
+	
+	
+	
   @AfterClass
     void tearDown() {
     	
@@ -100,6 +126,24 @@ public Properties p;
     	driver.quit();
     	
     }
+  
+  @AfterSuite
+  public void afterSuite() {
+      flushReport();
+  }
+  
+  // Flush ExtentReports after all tests finish
+  public static void flushReport() {
+      if (extent != null) {
+          extent.flush();
+      }
+     
+ 
+      
+  }
+  
+ 
+
 
   /* JavascriptExecutor interface is used to execute JavaScript code 
   directly within the context of the browser. 

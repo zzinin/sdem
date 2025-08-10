@@ -16,7 +16,7 @@
      <!--class name="testCases.TC006_HappyDaysTest"/ -->
      <!--class name="testCases.TC007_NonFunctionalTest"/ -->
      <!--class name="testCases.TC008_NonFunctionalResizeTest"/ -->
-     <class name="testCase.TC002_ProductCheckOutTest"/>
+     <class name="testCase.TC003_NonFunctionalTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
