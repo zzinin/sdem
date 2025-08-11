@@ -18,7 +18,7 @@ public class TC002_ProductCheckOutTest extends BaseClass {
 	@Test(dataProvider="ContactData1",dataProviderClass=DataProviders.class)
 	   public void testLogin(String userid,String password,String firstname,String lastname, String postcode) throws InterruptedException {
 	    
-		 test = extent.createTest("Test for Product Purchased By:" + userid);
+		 test = extent.createTest("TC002 Test for Product Purchased By:" + userid);
 		driver.get(p.getProperty("url"));
 		test.info("Navigated to Login Page.");
 	

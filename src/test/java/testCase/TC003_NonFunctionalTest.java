@@ -22,7 +22,7 @@ public class TC003_NonFunctionalTest extends BaseClass {
 	@Test(dataProvider="ContactData",dataProviderClass=DataProviders.class)
 	public void verifyPageLoadTimeUnder3Seconds(String userid,String password) throws InterruptedException {
 	    // Create test in ExtentReports
-	    test = extent.createTest("Page Load Time Test for user: " + userid);
+	    test = extent.createTest("TC003 Page Load Time Test for user: " + userid);
 
 	    try {
 	        long start = System.currentTimeMillis();

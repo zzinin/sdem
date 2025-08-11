@@ -26,7 +26,7 @@ import org.testng.annotations.Test;
 		@Test(dataProvider="ContactData",dataProviderClass=DataProviders.class)
 		   public void testLogin(String userid,String password) throws InterruptedException {
 		
-			 test = extent.createTest("Test for Login user:" + userid);
+			 test = extent.createTest("TC001 Test for Login user:" + userid);
 			driver.get(p.getProperty("url"));
 			test.info("Navigated to Login Page.");
 		
