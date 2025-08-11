@@ -47,11 +47,7 @@ public class BaseClass {
 public WebDriver driver;
 public Properties p;
 	
-public static void initReport() {
-    ExtentSparkReporter spark = new ExtentSparkReporter("target/ExtentReport.html");
-    extent = new ExtentReports();
-    extent.attachReporter(spark);
-}
+
 
 @BeforeSuite
 public void beforeSuite() {
@@ -132,15 +128,11 @@ public void beforeSuite() {
       flushReport();
   }
   
-  // Flush ExtentReports after all tests finish
-  public static void flushReport() {
-      if (extent != null) {
-          extent.flush();
-      }
+
      
  
       
-  }
+  
   
  
 
@@ -207,7 +199,17 @@ public void beforeSuite() {
 	        e.printStackTrace();
 	    }
 	}
-
-
+	//init extent report
+	public static void initReport() {
+	    ExtentSparkReporter spark = new ExtentSparkReporter("target/ExtentReport.html");
+	    extent = new ExtentReports();
+	    extent.attachReporter(spark);
+	}
+	  // Flush ExtentReports after all tests finish
+	  public static void flushReport() {
+	      if (extent != null) {
+	          extent.flush();
+	      }
 	
-   }
+	  }
+}
