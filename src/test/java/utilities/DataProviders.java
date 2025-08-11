@@ -1,73 +1,58 @@
 package utilities;
 
 import org.testng.annotations.DataProvider;
-import org.apache.poi.ss.usermodel.Row;
-
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
-
-
+/**
+ * DataProviders class to supply test data from Excel sheets for TestNG tests.
+ */
 public class DataProviders {
 
-   @DataProvider(name ="ContactData")
-    public String [][] getData() throws IOException {
+    @DataProvider(name = "ContactData")
+    public String[][] getData() throws IOException {
 
-        String path=".\\testData\\LoginDetails.xlsx";
- //      String sheetName="Sheet1";
-     ExcelUtil xlutil=new ExcelUtil(path);
-        int totalrows=xlutil.getRowCount("Sheet1");
-        System.out.println("RowCount:"+totalrows);
-        int totalcols=xlutil.getColumnCount("Sheet1",1);
-        System.out.println("ColoumnCount:"+totalcols);
-        String[][] logindata=new String[totalrows][totalcols];
-        for(int i=1;i<=totalrows;i++)
-        {
-        	for (int j=0;j<totalcols;j++)
-        	{
-        		logindata[i-1][j]=xlutil.getCellData("Sheet1", i, j);
-        		//System.out.println("Data:"+s);
-        		
-        	}
-        	
- //       	System.out.println("Row " + i + ": " + Arrays.toString(logindata[i - 1]));
+        String path = ".\\testData\\LoginDetails.xlsx";
+        ExcelUtil xlutil = new ExcelUtil(path);
+
+        int totalRows = xlutil.getRowCount("Sheet1");
+        System.out.println("RowCount: " + totalRows);
+
+        int totalCols = xlutil.getColumnCount("Sheet1", 1);
+        System.out.println("ColumnCount: " + totalCols);
+
+        String[][] loginData = new String[totalRows][totalCols];
+
+        for (int i = 1; i <= totalRows; i++) {
+            for (int j = 0; j < totalCols; j++) {
+                loginData[i - 1][j] = xlutil.getCellData("Sheet1", i, j);
+            }
         }
-       
-        return logindata;
+        return loginData;
     }
-   
-   
-   @DataProvider(name ="ContactData1")
-   public String [][] getData1() throws IOException {
 
-       String path=".\\testData\\LoginDetails.xlsx";
-//      String sheetName="Sheet1";
-    ExcelUtil xlutil=new ExcelUtil(path);
-       int totalrows=xlutil.getRowCount("Sheet2");
-       System.out.println("RowCount:"+totalrows);
-       int totalcols=xlutil.getColumnCount("Sheet2",1);
-       System.out.println("ColoumnCount:"+totalcols);
-       String[][] logindata=new String[totalrows][totalcols];
-       for(int i=1;i<=totalrows;i++)
-       {
-       	for (int j=0;j<totalcols;j++)
-       	{
-       		logindata[i-1][j]=xlutil.getCellData("Sheet2", i, j);
-       		//System.out.println("Data:"+s);
-       		
-       	}
-       	
-//       	System.out.println("Row " + i + ": " + Arrays.toString(logindata[i - 1]));
-       }
-      
-       return logindata;
-   }   
-   
-   
-   
+    @DataProvider(name = "ContactData1")
+    public String[][] getData1() throws IOException {
+
+        String path = ".\\testData\\LoginDetails.xlsx";
+        ExcelUtil xlutil = new ExcelUtil(path);
+
+        int totalRows = xlutil.getRowCount("Sheet2");
+        System.out.println("RowCount: " + totalRows);
+
+        int totalCols = xlutil.getColumnCount("Sheet2", 1);
+        System.out.println("ColumnCount: " + totalCols);
+
+        String[][] loginData = new String[totalRows][totalCols];
+
+        for (int i = 1; i <= totalRows; i++) {
+            for (int j = 0; j < totalCols; j++) {
+                loginData[i - 1][j] = xlutil.getCellData("Sheet2", i, j);
+            }
+        }
+        return loginData;
+    }
 }
+
 
         
  
