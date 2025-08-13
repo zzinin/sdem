@@ -105,7 +105,7 @@ public class BaseTest {
 
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-        driver.get(property.getProperty("url")); // Reading the "Automation Testing url" from config file
+        driver.get(property.getProperty("url")); // Reading the "SauceDemo URL" from config file
         driver.manage().window().maximize();
     }
 
