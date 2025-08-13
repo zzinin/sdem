@@ -45,7 +45,11 @@ public class TC002_ProductCheckOutTest extends BaseClass {
             boolean loginSuccess = driver.getCurrentUrl().contains("inventory");
 
             if (loginSuccess) {
-                test.pass("Login success for user: " + userid);
+                test.pass("Login success for user: " + userid).addScreenCaptureFromPath(captureScreenshot("Login_Success_"+ userid));
+                
+                
+                
+                
             } else {
                 String errorMessage = driver.findElement(By.xpath(
                         "//*[@id=\"login_button_container\"]/div/form/div[3]/h3")).getText();
@@ -85,7 +89,8 @@ public class TC002_ProductCheckOutTest extends BaseClass {
             focusOn(driver, By.xpath("//button[@id='finish']"));
 
             buyproduct.finishOrder();
-            test.pass("Order completed successfully for user: " + userid);
+            String  finalScreenshotPath= captureScreenshot("Order_Success_" +userid); 
+            test.pass("Order completed successfully for user: " + userid).addScreenCaptureFromPath(finalScreenshotPath);
             slowDown(3);
 
         } catch (Exception e) {

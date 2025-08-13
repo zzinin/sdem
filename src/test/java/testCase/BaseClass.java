@@ -1,10 +1,13 @@
 package testCase;
 
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -13,6 +16,8 @@ import java.util.concurrent.ThreadLocalRandom;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,6 +25,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -176,4 +182,36 @@ public class BaseClass {
             extent.flush();
         }
     }
+    
+    //CaptureScreenshot Utility method 
+    
+    public String captureScreenshot(String screenshotName) {
+        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String folderPath = System.getProperty("user.dir") + "/screenshots/";
+
+        // Create folder if it does not exist
+        File screenshotDir = new File(folderPath);
+        if (!screenshotDir.exists()) {
+            screenshotDir.mkdirs();
+        }
+
+        // Take screenshot
+        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        String destPath = folderPath + screenshotName + "_" + timestamp + ".png";
+
+        try {
+            FileHandler.copy(srcFile, new File(destPath));
+            System.out.println("Screenshot saved at: " + destPath);
+        } catch (IOException e) {
+            System.err.println("Failed to save screenshot: " + e.getMessage());
+        }
+
+        return destPath;
+    }
+    
+    
+    
+    
+    
+    
 }

@@ -49,7 +49,7 @@ public class TC001_LoginTest extends BaseClass {
             if (userid.equalsIgnoreCase("locked_out_user")) {
                 Assert.assertEquals(errorMsg,
                         "Epic sadface: Sorry, this user has been locked out.");
-                test.pass("Correct error is displayed for locked_out_user.");
+                test.pass("Correct error is displayed for locked_out_user.").addScreenCaptureFromPath(captureScreenshot("ERROR_Login" +errorMsg));
             } else {
                 System.out.println("User: " + userid + " Login Failed - Message: " + errorMsg);
                 test.fail("Unexpected login failure for user:" + userid);
@@ -60,9 +60,9 @@ public class TC001_LoginTest extends BaseClass {
             Assert.assertTrue(success, "Login failed for userid: " + userid);
 
             if (success) {
-                test.pass("Login successful for userid " + userid);
+                test.pass("Login successful for userid " + userid).addScreenCaptureFromPath(captureScreenshot("LoginSuccess" +userid));
             } else {
-                test.fail("Login failed for userid " + userid);
+                test.fail("Login failed for userid " + userid).addScreenCaptureFromPath(captureScreenshot("Unsuccessful_Login" +userid));
             }
         } finally {
             driver.findElement(By.xpath("//button[@id='react-burger-menu-btn']")).click();
