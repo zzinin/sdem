@@ -45,7 +45,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
  * Configurations. Supports Cross-Browser Testing. Enhances Code Reusability and 
  * Clean Structure.
  */
-public class BaseClass {
+public class BaseTest {
 
     protected static ExtentReports extent;
     protected static ExtentTest test;

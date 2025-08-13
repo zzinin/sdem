@@ -15,7 +15,7 @@ import utilities.DataProviders;
 /**
  * Non-Functional Test: Verifies the page load time is under 3 seconds.
  */
-public class TC003_NonFunctionalTest extends BaseClass {
+public class TC003_NonFunctionalTest extends BaseTest {
 
     @Test(dataProvider = "ContactData", dataProviderClass = DataProviders.class)
     public void verifyPageLoadTimeUnder3Seconds(String userid, String password) throws InterruptedException {
@@ -83,7 +83,7 @@ public class TC003_NonFunctionalTest extends BaseClass {
             test.fail("Test encountered exception: " + e.getMessage());
             throw e;   // rethrow to fail the test in TestNG
         } finally {
-            BaseClass.flushReport();  // flush after each test (optional)
+            BaseTest.flushReport();  // flush after each test (optional)
         }
     }
 }

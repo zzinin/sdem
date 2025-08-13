@@ -12,7 +12,7 @@ import pageObjects.LoginPage;
 import pageObjects.ProductPage;
 import utilities.DataProviders;
 
-public class TC002_ProductCheckOutTest extends BaseClass {
+public class TC002_ProductCheckOutTest extends BaseTest {
 
     @Test(dataProvider = "ContactData1", dataProviderClass = DataProviders.class)
     public void testLogin(String userid, String password, String firstname, String lastname, String postcode)

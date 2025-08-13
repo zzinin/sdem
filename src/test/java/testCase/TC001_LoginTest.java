@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import pageObjects.LoginPage;
 import utilities.DataProviders;
 
-public class TC001_LoginTest extends BaseClass {
+public class TC001_LoginTest extends BaseTest {
 
     @Test(dataProvider = "ContactData", dataProviderClass = DataProviders.class)
     public void testLogin(String userid, String password) throws InterruptedException {
