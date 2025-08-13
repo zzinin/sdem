@@ -18,7 +18,7 @@ public class TC001_LoginTest extends BaseTest {
     public void testLogin(String userid, String password) throws InterruptedException {
        
         test = extent.createTest("TC001 Test for Login user:" + userid);
-        driver.get(p.getProperty("url"));
+        driver.get(property.getProperty("url"));
         test.info("Navigated to Login Page.");
        
 

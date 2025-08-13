@@ -50,7 +50,7 @@ public class BaseTest {
     protected static ExtentReports extent;
     protected static ExtentTest test;
     public WebDriver driver;
-    public Properties p;
+    public Properties property;
 
     @BeforeSuite
     public void beforeSuite() {
@@ -63,8 +63,8 @@ public class BaseTest {
 
         // Loading Config.properties FILE
         FileReader file = new FileReader("./src/test/resources/config.properties");
-        p = new Properties();
-        p.load(file);
+        property = new Properties();
+        property.load(file);
 
         // Accommodates any browser
         switch (br.toLowerCase()) {
@@ -105,7 +105,7 @@ public class BaseTest {
 
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-        driver.get(p.getProperty("url")); // Reading the "Automation Testing url" from config file
+        driver.get(property.getProperty("url")); // Reading the "Automation Testing url" from config file
         driver.manage().window().maximize();
     }
 

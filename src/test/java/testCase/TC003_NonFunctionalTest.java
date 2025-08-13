@@ -25,7 +25,7 @@ public class TC003_NonFunctionalTest extends BaseTest {
 
         try {
             long start = System.currentTimeMillis();
-            driver.get(p.getProperty("url"));
+            driver.get(property.getProperty("url"));
 
             LoginPage login = new LoginPage(driver);
             login.Userid(userid);

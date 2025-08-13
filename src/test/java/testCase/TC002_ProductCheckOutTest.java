@@ -19,7 +19,7 @@ public class TC002_ProductCheckOutTest extends BaseTest {
             throws InterruptedException {
 
         test = extent.createTest("TC002 Test for Product Purchased By: " + userid);
-        driver.get(p.getProperty("url"));
+        driver.get(property.getProperty("url"));
         test.info("Navigated to Login Page.");
 
         ProductPage buyproduct = new ProductPage(driver);
