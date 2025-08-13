@@ -16,10 +16,11 @@ public class TC001_LoginTest extends BaseClass {
 
     @Test(dataProvider = "ContactData", dataProviderClass = DataProviders.class)
     public void testLogin(String userid, String password) throws InterruptedException {
-
+       
         test = extent.createTest("TC001 Test for Login user:" + userid);
         driver.get(p.getProperty("url"));
         test.info("Navigated to Login Page.");
+       
 
         LoginPage login = new LoginPage(driver);
 
@@ -31,6 +32,7 @@ public class TC001_LoginTest extends BaseClass {
 
         login.Login();
         test.info("Clicked Login button.");
+        
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.or(
