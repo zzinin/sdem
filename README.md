@@ -146,6 +146,7 @@ saucedemo-automation/
 ❌ Failed Login Test (with screenshot in Extent Report)
 
 🛒 Checkout Confirmation
+
 ---
 ## 📌 Next Enhancements
 
