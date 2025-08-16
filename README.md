@@ -1,210 +1,145 @@
-
-# 🧪 Shady Meadows B&B – Test Automation Framework
-
-This project automates the key functionalities of the **Shady Meadows B&B** website, including:
-
-- 🛏️ Room Booking
-- 📩 Contact Form Submission
-- 🎯 UX/UI Element Verification
-
-The automation framework is implemented using "Selenium WebDriver", "Java", "Maven", and "TestNG", following the "Page Object Model (POM)" for modularity and scalability.
+Got it ✅
+If you’re **not running tests via Maven** and instead directly executing via **TestNG.xml**, we’ll simplify the README.
+Here’s the **TestNG-only version**:
 
 ---
 
-## 🧱 Framework Structure
+# 🚀 Sauce Demo Test Automation Framework
 
-### 🔸 `base/`
-- Contains `BasePage.java`, which holds the shared WebDriver instance.
-- Uses `PageFactory.initElements()` to initialize elements across all page objects, enabling reuse within a single browser session.
+![Java](https://img.shields.io/badge/Java-11%2B-blue)
+![Selenium](https://img.shields.io/badge/Selenium-4.x-brightgreen)
+![TestNG](https://img.shields.io/badge/TestNG-7.x-orange)
+![ExtentReport](https://img.shields.io/badge/Reporting-Extent-lightgrey)
+![Build](https://img.shields.io/badge/Build-Passing-success)
 
-### 🔸 `testCases/`
-Automated test classes include:
-
-| Test Case Class   | Description |
-|------------------|-------------|
-| `TC001_BookNowTest` | Automates full room booking process |
-| `TC002_SubmitMessageTest` | Validates the contact form with valid input |
-| `TC003_NegativeSubmitMessageTest` | Tests field validation with incorrect contact form input |
-| `TC004_NegativeBookNowTest` | Negative test for invalid room booking data |
-| `TC005_SubmitDDT` | Data-driven contact form test using Excel input |
-| `TC006_HappyDaysTest` | UI verification for user-friendly field visibility |
-| `TC007_NonFunctionalTest` | Non functional verification for page load time |
-| `TC008_NonFunctionalResizeTest` | Non functional verification for resize of page to Desktop view and Mobile view  |
+This project is a **Test Automation Framework** for [Sauce Demo](https://www.saucedemo.com/) built using **Java, Selenium WebDriver, TestNG, and Extent Reports**.
+It follows the **Page Object Model (POM)** design pattern and supports **data-driven testing** using Excel.
 
 ---
 
-### 🔸 `utilities/`
-- `ExcelUtil.java`: Apache POI-based utility to read/write `.xlsx` data.
-- `DataProviders.java`: Supplies test data to TestNG tests via `@DataProvider`.
+## 📂 Project Structure
 
----
-
-### 🔸 `resources/`
-- Holds `config.properties`, containing reusable variables (like URLs, credentials, and driver configs).
-
----
-
-### 🔸 `testData/`
-- Contains `Contact.xlsx`, which provides dynamic input data for data-driven tests.
-
----
-
-### 🔸 `testng.xml` and `parallelcrossbrowser.xml`
-- `testng.xml`: Executes the full test suite.
-- `parallelcrossbrowser.xml`: Enables parallel test execution across multiple browsers.
+```
+saucedemo-automation/
+│── TestNG.xml                    # TestNG suite file (entry point for execution)
+│── parallelcrossbrowser.xml       # Parallel cross-browser execution suite (optional)
+│
+├── src
+│   └── test
+│       └── java
+│           ├── pageObject/        # Page Object classes
+│           ├── testCase/          # Test classes (TestNG)
+│           └── utilities/         # Utilities (Excel reader, WebDriver manager, Extent logger)
+│
+├── testData/
+│   └── LoginDetails.xlsx          # Data-driven Excel file for login credentials
+│
+├── target/
+│   ├── ExtentReports/             # Extent HTML reports
+│   └── test-output/               # Default TestNG reports
+```
 
 ---
 
 ## ⚙️ Tech Stack
 
-| Tool | Role |
-|------|------|
-| **Selenium WebDriver** | Web automation |
-| **Java** | Core programming language |
-| **TestNG** | Testing framework and reporting |
-| **Maven** | Build and dependency management |
-| **GitHub** | Version control and collaboration |
-| **Apache POI** | Excel data handling |
+* **Java** (JDK 11+)
+* **Selenium WebDriver 4.x**
+* **TestNG 7.x** (test execution & reporting)
+* **Extent Reports** (HTML reports)
+* **Apache POI** (Excel data-driven testing)
 
 ---
 
-## ✅ Key Benefits
-
-- **POM Design**: Modular and scalable structure
-- **Reusable Codebase**: Minimal duplication across pages and tests
-- **Excel-Driven Testing**: External data integration via Apache POI
-- **Maven**: Clean project lifecycle and dependency control
-- **GitHub**: Collaboration-ready for team scaling
-- **Parallel Execution**: Support for cross-browser and multi-threaded testing
-
----
-
-> 🎯 This framework is designed to be flexible, maintainable, and easy to extend for broader test coverage and team collaboration.
-
-
-
-## 🧑‍💻 User Manual
-
-### 📦 Prerequisites
-
-Ensure the following tools are installed before setting up and running the test automation framework:
-
-| Tool            | Version                   | Notes                                            |
-| --------------- | ------------------------- | ------------------------------------------------ |
-| Java            | 8 or higher               | Required for running Selenium + TestNG           |
-| Maven           | 3.6+                      | Manages dependencies and project build lifecycle |
-| Git             | Latest                    | For cloning the repository                       |
-| IDE             | IntelliJ IDEA / Eclipse   | Recommended for working with Java projects       |
-
-> 💡 **Tip:** WebDriverManager automatically downloads the correct version of the WebDriver for the browser version installed on the system.
-
----
-
-### 🚀 Installation Steps
+## 🛠️ Setup Instructions
 
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/zzinin/ShaddyM.git
-   
+   git clone https://github.com/your-username/saucedemo-automation.git
+   cd saucedemo-automation
    ```
 
-2. **Open in Eclipse IDE**
+2. **Install Dependencies**
 
-   * Choose **"Import as Maven Project"** when importing into Eclipse.
-   * Let Maven resolve dependencies automatically from `pom.xml`.
+   * Import the project into your **IDE (IntelliJ / Eclipse)**.
+   * Ensure all **required JARs** (Selenium, TestNG, Apache POI, ExtentReports) are added to your build path.
 
-3. **Update Configuration**
+3. **Update Test Data**
 
-   * Modify `resources/config.properties` as needed:
+   * Add login credentials in `testData/LoginDetails.xlsx`
+   * Example format:
 
-     ```properties
-     baseUrl=https://automationintesting.online/
-     browser=chrome
-      excelPath=./testData/Contact.xlsx
+     | Username          | Password      |
+     | ----------------- | ------------- |
+     | standard\_user    | secret\_sauce |
+     | locked\_out\_user | secret\_sauce |
+
+4. **Run Tests via TestNG**
+
+   * Right-click on `TestNG.xml` → **Run As → TestNG Suite**
+   * Or from terminal (if TestNG is installed as plugin):
+
+     ```bash
+     java -cp "bin;libs/*" org.testng.TestNG TestNG.xml
      ```
 
-4. **Update Excel Test Data (if required)**
+---
 
-   * Modify `testData/Contact.xlsx` for data-driven testing.
+## 📊 Reporting
+
+* **Extent Reports** generated at:
+
+  ```
+  target/ExtentReports/ExtentReport.html
+  ```
+* **TestNG default reports** generated at:
+
+  ```
+  target/test-output/index.html
+  ```
 
 ---
 
-### 🧪 Test Execution (Eclipse IDE Only)
+## ✅ Features
 
-All test executions must be initiated from the TestNG XML files directly within Eclipse.
-
-#### ✅ Option 1: Run All Tests Sequentially
-
-* Right-click on `testng.xml` in the Project Explorer.
-* Select:
-  **`Run As > TestNG Suite`**
-
-This runs all test cases sequentially using default configuration.
-
-#### 🔁 Option 2: Run Tests in Parallel Across Browsers
-
-* Right-click on `parallelcrossbrowser.xml`
-* Select:
-  **`Run As > TestNG Suite`**
-
-This executes tests in **parallel threads** using multiple browsers, based on the setup defined in the XML.
-
-> ❗ **Important:** Command-line test execution is not supported or recommended. Always use Eclipse’s TestNG runner for proper environment and suite loading.
-
-📄 **Test Reports**
-
-* After execution, view the report at:
-
-  ```
-  /test-output/index.html
-  ```
-
-  Open this file in your browser to see a detailed breakdown of test results.
+* Page Object Model (**POM**) for maintainability
+* **Data-driven** tests via Excel (`LoginDetails.xlsx`)
+* **Cross-browser support** (if configured in parallelcrossbrowser.xml)
+* **Parallel execution** with TestNG suite
+* **Beautiful Extent Reports** with screenshots for failures
 
 ---
 
-### 🏗️ Framework Structure Overview
+## 🔧 Sample Test Case
 
-```
-.
-├── base/
-│   └── BasePage.java                # Shared WebDriver logic
-├── testCases/
-│   ├── TC001_BookNowTest.java
-│   ├── TC002_SubmitMessageTest.java
-│   ├── TC003_NegativeSubmitMessageTest.java
-│   ├── TC004_NegativeBookNowTest.java
-│   ├── TC005_SubmitDDT.java
-│   └── TC006_HappyDaysTest.java
-│   └── TC007_NonFunctionalTest.java
-│   └── TC008_NonFunctionalResizeTest.java   
-├── utilities/
-│   ├── ExcelUtil.java
-│   └── DataProviders.java
-├── resources/
-│   └── config.properties
-├── testData/
-│   └── Contact.xlsx
-├── testng.xml                      # Main suite for sequential tests
-├── parallelcrossbrowser.xml       # Suite for parallel browser execution
-└── pom.xml                         # Maven configuration
+```java
+@Test(dataProvider = "loginData")
+public void testValidLogin(String username, String password) {
+    LoginPage loginPage = new LoginPage(driver);
+    loginPage.login(username, password);
+
+    Assert.assertTrue(
+        new HomePage(driver).isProductsHeaderVisible(),
+        "Login failed with username: " + username
+    );
+}
 ```
 
 ---
 
-### ✅ Key Benefits
+## 📌 Next Enhancements
 
-* **🔧 POM Architecture**: Easy to maintain and scale
-* **♻️ Reusability**: Centralized logic for pages and test steps
-* **📊 Excel Integration**: Data-driven testing with Apache POI
-* **⚙️ Configuration-Driven**: Change URL, browser, and timeouts easily
-* **🧪 Parallel Execution**: Supports multi-browser testing with TestNG
-* **📈 Auto-Generated Reports**: HTML reports generated after each run
-* **🔁 IDE-First Execution**: TestNG execution tightly integrated with Eclipse
+* CI/CD integration with **Jenkins**
+* Add **Docker + Selenium Grid** for distributed execution
+* Integrate with **Allure Reports**
 
 ---
 
+👨‍💻 **Author**: RAHUL RANJAN
+📧 Reach out for collaboration or suggestions!
+
+---
 
 **Disclaimer**: I Referred AI system, to present my test automation design concept in user friendly manner in read me file. 
 
