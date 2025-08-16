@@ -139,7 +139,13 @@ saucedemo-automation/
 👉 To run only **login test**, comment out other `<class>` entries.
 
 ---
+📸 Sample Reports
+✅ Successful Login Test
 
+❌ Failed Login Test (with screenshot in Extent Report)
+
+🛒 Checkout Confirmation
+---
 ## 📌 Next Enhancements
 
 * Add **Cross-browser testing** (`parallelcrossbrowser.xml`)
