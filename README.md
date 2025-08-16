@@ -1,8 +1,3 @@
-Got it ✅
-If you’re **not running tests via Maven** and instead directly executing via **TestNG.xml**, we’ll simplify the README.
-Here’s the **TestNG-only version**:
-
----
 
 # 🚀 Sauce Demo Test Automation Framework
 
