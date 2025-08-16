@@ -1,4 +1,3 @@
-
 # 🚀 Sauce Demo Test Automation Framework
 
 ![Java](https://img.shields.io/badge/Java-11%2B-blue)
@@ -8,7 +7,7 @@
 ![Build](https://img.shields.io/badge/Build-Passing-success)
 
 This project is a **Test Automation Framework** for [Sauce Demo](https://www.saucedemo.com/) built using **Java, Selenium WebDriver, TestNG, and Extent Reports**.
-It follows the **Page Object Model (POM)** design pattern and supports **data-driven testing** using Excel.
+It follows the **Page Object Model (POM)** design pattern, includes **data-driven testing** from Excel, and supports **functional + non-functional test cases**.
 
 ---
 
@@ -16,14 +15,17 @@ It follows the **Page Object Model (POM)** design pattern and supports **data-dr
 
 ```
 saucedemo-automation/
-│── TestNG.xml                    # TestNG suite file (entry point for execution)
-│── parallelcrossbrowser.xml       # Parallel cross-browser execution suite (optional)
+│── TestNG.xml                    # Main suite file (entry point for execution)
 │
 ├── src
 │   └── test
 │       └── java
 │           ├── pageObject/        # Page Object classes
-│           ├── testCase/          # Test classes (TestNG)
+│           ├── testCase/          
+│           │   ├── BaseTest.java          # Setup & teardown (browser, reports, etc.)
+│           │   ├── TC001_LoginTest.java   # Login test (data-driven via Excel)
+│           │   ├── TC002_ProductCheckOut.java # Product checkout test
+│           │   ├── TC003_NonFunctionalTest.java # Page load performance test
 │           └── utilities/         # Utilities (Excel reader, WebDriver manager, Extent logger)
 │
 ├── testData/
@@ -41,7 +43,7 @@ saucedemo-automation/
 * **Java** (JDK 11+)
 * **Selenium WebDriver 4.x**
 * **TestNG 7.x** (test execution & reporting)
-* **Extent Reports** (HTML reports)
+* **Extent Reports** (HTML reporting with screenshots)
 * **Apache POI** (Excel data-driven testing)
 
 ---
@@ -51,14 +53,14 @@ saucedemo-automation/
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/zzinin/sdem.git
-  
+   git clone https://github.com/your-username/saucedemo-automation.git
+   
    ```
 
-2. **Install Dependencies**
+2. **Open in IDE**
 
-   * Import the project into your **IDE (IntelliJ / Eclipse)**.
-   * Ensure all **required JARs** (Selenium, TestNG, Apache POI, ExtentReports) are added to your build path.
+   * Import the project in **IntelliJ / Eclipse**.
+   * Add required libraries (**Selenium, TestNG, Apache POI, ExtentReports**) to your project build path.
 
 3. **Update Test Data**
 
@@ -72,12 +74,9 @@ saucedemo-automation/
 
 4. **Run Tests via TestNG**
 
-   * Right-click on `TestNG.xml` → **Run As → TestNG Suite**
-   * Or from terminal (if TestNG is installed as plugin):
-
-     ```bash
-     java -cp "bin;libs/*" org.testng.TestNG TestNG.xml
-     ```
+   * Open `TestNG.xml`
+   * Right-click → **Run As → TestNG Suite**
+   * You can comment/uncomment individual `<class>` entries in `TestNG.xml` to run only selected test cases.
 
 ---
 
@@ -96,43 +95,66 @@ saucedemo-automation/
 
 ---
 
-## ✅ Features
+## ✅ Test Cases
 
-* Page Object Model (**POM**) for maintainability
-* **Data-driven** tests via Excel (`LoginDetails.xlsx`)
-* **Cross-browser support** (if configured in parallelcrossbrowser.xml)
-* **Parallel execution** with TestNG suite
-* **Beautiful Extent Reports** with screenshots for failures
+### 🔹 BaseTest.java
+
+* Contains `@BeforeClass` (setup: browser, URL, reports)
+* Contains `@AfterClass` (teardown: close browser, flush reports)
+
+### 🔹 TC001\_LoginTest.java
+
+* Data-driven login test using `LoginDetails.xlsx`
+* Validates authentication for all user types
+* Captures screenshots in Extent Report for failed logins
+
+### 🔹 TC002\_ProductCheckOut.java
+
+* Selects a product
+* Performs checkout and final confirmation
+* Validates welcome/thank-you message after successful order
+
+### 🔹 TC003\_NonFunctionalTest.java
+
+* Verifies **page load time** is within **3 seconds**
+* Marks test as failed if threshold is exceeded
 
 ---
 
-## 🔧 Sample Test Case
+## 🔧 Sample TestNG.xml
 
-```java
-@Test(dataProvider = "loginData")
-public void testValidLogin(String username, String password) {
-    LoginPage loginPage = new LoginPage(driver);
-    loginPage.login(username, password);
-
-    Assert.assertTrue(
-        new HomePage(driver).isProductsHeaderVisible(),
-        "Login failed with username: " + username
-    );
-}
+```xml
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="SauceDemo Test Suite" parallel="false">
+    <test name="SauceDemo Functional and Non-Functional Tests">
+        <classes>
+            <class name="testCase.TC001_LoginTest"/>
+            <class name="testCase.TC002_ProductCheckOut"/>
+            <class name="testCase.TC003_NonFunctionalTest"/>
+        </classes>
+    </test>
+</suite>
 ```
+
+👉 To run only **login test**, comment out other `<class>` entries.
 
 ---
 
 ## 📌 Next Enhancements
 
-* CI/CD integration with **Jenkins**
-* Add **Docker + Selenium Grid** for distributed execution
-* Integrate with **Allure Reports**
+* Add **Cross-browser testing** (`parallelcrossbrowser.xml`)
+* CI/CD pipeline with **Jenkins**
+* Add **Docker + Selenium Grid** for parallel execution
+* Integrate **Allure Reports**
 
 ---
 
-👨‍💻 **Author**: RAHUL RANJAN
+👨‍💻 **Author**: Your Name
 📧 Reach out for collaboration or suggestions!
+
+---
+
+Would you like me to also **add example screenshots of Extent Report output** (like login test pass/fail with screenshots) into the README? That makes the GitHub repo much more attractive for hiring managers.
 
 ---
 
