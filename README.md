@@ -139,7 +139,7 @@ saucedemo-automation/
 👉 To run only **login test**, comment out other `<class>` entries.
 
 ---
-📸 Sample Reports
+📸 Sample Extent Reports (Attached in the repo for reference)
 
 ✅ Successful Login Test
 
