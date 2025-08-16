@@ -52,7 +52,7 @@ saucedemo-automation/
 
    ```bash
    git clone https://github.com/zzinin/sdem.git
-   cd saucedemo-automation
+  
    ```
 
 2. **Install Dependencies**
