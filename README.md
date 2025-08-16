@@ -149,14 +149,10 @@ saucedemo-automation/
 
 ---
 
-👨‍💻 **Author**: Your Name
+👨‍💻 **Author**: RAHUL RANJAN 
 📧 Reach out for collaboration or suggestions!
 
----
 
-Would you like me to also **add example screenshots of Extent Report output** (like login test pass/fail with screenshots) into the README? That makes the GitHub repo much more attractive for hiring managers.
-
----
 
 **Disclaimer**: I Referred AI system, to present my test automation design concept in user friendly manner in read me file. 
 
