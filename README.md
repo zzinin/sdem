@@ -140,6 +140,7 @@ saucedemo-automation/
 
 ---
 📸 Sample Reports
+
 ✅ Successful Login Test
 
 ❌ Failed Login Test (with screenshot in Extent Report)
