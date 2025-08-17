@@ -28,6 +28,7 @@ public class TC001_LoginTest extends BaseTest {
         test.info("Entered username: " + userid);
         login.Password(password);
         test.info("Entered Password.");
+        //Below Slowdown function has been called intentionally to reduce execution speed
         slowDown(3);
 
         login.Login();

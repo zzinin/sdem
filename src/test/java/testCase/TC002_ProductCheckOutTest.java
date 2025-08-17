@@ -61,11 +61,11 @@ public class TC002_ProductCheckOutTest extends BaseTest {
             // Product purchase steps
             buyproduct.addToCart();
             test.info("Product added to cart.");
-
+            //Below Slowdown function has been called intentionally to reduce execution speed
             slowDown(3);
             buyproduct.clickToCart();
             test.info("Navigated to cart.");
-
+            //Below Slowdown function has been called intentionally to reduce execution speed
             slowDown(3);
             buyproduct.checkOut();
             test.info("Proceeded to checkout.");
@@ -80,11 +80,12 @@ public class TC002_ProductCheckOutTest extends BaseTest {
             test.info("Entered postcode: " + postcode);
 
             focusOn(driver, By.xpath("//*[@id=\"continue\"]"));
+            //Below Slowdown function has been called intentionally to reduce execution speed
             slowDown(3);
 
             buyproduct.clickContinue();
             test.info("Clicked Continue.");
-
+            //Below Slowdown function has been called intentionally to reduce execution speed
             slowDown(3);
             focusOn(driver, By.xpath("//button[@id='finish']"));
             //Test for Finish Order and message once order completed

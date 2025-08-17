@@ -30,7 +30,7 @@ public class TC003_NonFunctionalTest extends BaseTest {
             LoginPage login = new LoginPage(driver);
             login.Userid(userid);
             login.Password(password);
-
+            //Below Slowdown function has been called intentionally to reduce execution speed
             slowDown(3);
             login.Login();
 
@@ -48,7 +48,7 @@ public class TC003_NonFunctionalTest extends BaseTest {
 
             Assert.assertTrue(loadTime < 3000, "Page load time exceeds 3 seconds!");
             test.pass("Page load time is under 3 seconds");
-
+            //Below Slowdown function has been called intentionally to reduce execution speed
             slowDown(3);
 
             // Check if error message is displayed
