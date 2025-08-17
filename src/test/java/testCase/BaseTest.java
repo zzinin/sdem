@@ -86,7 +86,8 @@ public class BaseTest {
             options.addArguments("--safebrowsing-disable-extension-blacklist");
             options.addArguments("--safebrowsing-disable-download-protection");
             options.addArguments("--incognito");
-            options.addArguments("--headless");  // Run without UI
+            //Commented below will revisit later, was preparing for GitHub Action
+            //options.addArguments("--headless");  // Run without UI
 
             driver = new ChromeDriver(options);
             break;
