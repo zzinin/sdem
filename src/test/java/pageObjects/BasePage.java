@@ -5,13 +5,12 @@ import org.openqa.selenium.support.PageFactory;
 
 /**
  * Base page class for all Page Object classes.
- * <p>
  * Holds a shared {@link WebDriver} instance, allowing all page objects
  * to operate within the same browser session.
  * Uses {@link PageFactory#initElements(WebDriver, Object)} to automatically
  * initialize all WebElements annotated with {@code @FindBy}.
- * </p>
  */
+
 public class BasePage {
 
     protected WebDriver driver;

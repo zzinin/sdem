@@ -72,7 +72,7 @@ public class ProductPage extends BasePage {
 
     /** Thank you message displayed after order completion. */
     @FindBy(xpath = "//h2[normalize-space()='Thank you for your order!']")
-    private WebElement txtThankYou;
+	private  WebElement txtThankYou;
 
     /** Button to go back to products after order completion. */
     @FindBy(xpath = "//button[@id='back-to-products']")
@@ -168,7 +168,11 @@ public class ProductPage extends BasePage {
     public String getThankYouText() {
         return txtThankYou.getText();
     }
-
+    
+    /** Returns WebElement to be used further while getting inherited*/
+    public WebElement getThankYouElement() {
+        return txtThankYou;
+    } 
     /** Clicks the button to go back to the home/products page after order. */
     public void backToHome() {
         btnBackToHome.click();

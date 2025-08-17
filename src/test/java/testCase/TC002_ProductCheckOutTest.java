@@ -87,16 +87,27 @@ public class TC002_ProductCheckOutTest extends BaseTest {
 
             slowDown(3);
             focusOn(driver, By.xpath("//button[@id='finish']"));
-
+            //Test for Finish Order and message once order completed
             buyproduct.finishOrder();
             String  finalScreenshotPath= captureScreenshot("Order_Success_" +userid); 
             test.pass("Order completed successfully for user: " + userid).addScreenCaptureFromPath(finalScreenshotPath);
             slowDown(3);
+            
+            // Test for Thank You message is displayed
+            wait.until(ExpectedConditions.visibilityOf(buyproduct.getThankYouElement()));
+            String thankYou= buyproduct.getThankYouText();
+            test.info("Validating Thank You Message");
+            //Assertion handles pass/fail automatically 
+            Assert.assertEquals(thankYou,"Thank you for your order!","Thank You message is not displayed correctly");
+            test.pass(thankYou);
 
         } catch (Exception e) {
             test.fail("Test encountered an exception for user: " + userid + " | " + e.getMessage());
             Assert.fail("Exception during checkout process for user: " + userid, e);
             System.out.println("Error during test for user: " + userid);
+            
+            
+            
 
         } finally {
             buyproduct.openBurgerMenu();

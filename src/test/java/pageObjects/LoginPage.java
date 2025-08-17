@@ -6,11 +6,10 @@ import org.openqa.selenium.support.FindBy;
 
 /**
  * Page Object class representing the SauceDemo Login Page.
- * <p>
  * Contains WebElements and related actions that can be performed on the login page.
  * Extends {@link BasePage} to inherit the WebDriver instance and element initialization.
- * </p>
  */
+
 public class LoginPage extends BasePage {
 
     /**
