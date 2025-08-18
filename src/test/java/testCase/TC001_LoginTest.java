@@ -1,14 +1,12 @@
 package testCase;
 
 import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import pageObjects.LoginPage;
 import utilities.DataProviders;
 
@@ -21,14 +19,13 @@ public class TC001_LoginTest extends BaseTest {
         driver.get(property.getProperty("url"));
         test.info("Navigated to Login Page.");
        
-
         LoginPage login = new LoginPage(driver);
 
         login.Userid(userid);
         test.info("Entered username: " + userid);
         login.Password(password);
         test.info("Entered Password.");
-        //Below Slowdown function has been called intentionally to reduce execution speed
+        //Below Slowdown function has been called intentionally to reduce execution speed, can be removed during CI/CD
         slowDown(3);
 
         login.Login();

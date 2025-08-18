@@ -1,13 +1,11 @@
 package testCase;
 
 import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import pageObjects.LoginPage;
 import pageObjects.ProductPage;
 import utilities.DataProviders;
@@ -106,10 +104,7 @@ public class TC002_ProductCheckOutTest extends BaseTest {
             test.fail("Test encountered an exception for user: " + userid + " | " + e.getMessage());
             Assert.fail("Exception during checkout process for user: " + userid, e);
             System.out.println("Error during test for user: " + userid);
-            
-            
-            
-
+         
         } finally {
             buyproduct.openBurgerMenu();
             slowDown(3);

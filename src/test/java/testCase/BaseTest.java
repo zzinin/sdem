@@ -12,7 +12,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.ThreadLocalRandom;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
@@ -33,7 +32,6 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -162,7 +160,9 @@ public class BaseTest {
     public void resizeWindow(int width, int height) {
         driver.manage().window().setSize(new Dimension(width, height));
     }
-
+    /*Method defined below to slowdown the test automation execution intentionally,
+     *to make user friendly test execution, can be definitely removed if this test execution is being done in CI/CD */
+    
     public void slowDown(int seconds) {
         try {
             Thread.sleep(seconds * 1000); // Pause for given seconds
@@ -171,7 +171,7 @@ public class BaseTest {
         }
     }
 
-    // init extent report
+    // initialise  extent report
     public static void initReport() {
         ExtentSparkReporter spark = new ExtentSparkReporter("target/ExtentReport.html");
         extent = new ExtentReports();
@@ -210,10 +210,6 @@ public class BaseTest {
 
         return destPath;
     }
-    
-    
-    
-    
     
     
 }
