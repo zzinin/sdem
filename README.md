@@ -34,6 +34,8 @@ saucedemo-automation/
 ├── target/
 │   ├── ExtentReports/             # Extent HTML reports
 │   └── test-output/               # Default TestNG reports
+│── .github/workflows              # Plan to run the test via "Action" in "Github" when new code is pushed to Master     
+│── .gitignore                     # To keep the repository clean, secure
 ```
 
 ---
