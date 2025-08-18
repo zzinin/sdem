@@ -8,14 +8,6 @@
     <classes>
     
     <!--Kindly comment the below test cases you do not want to execute-->
-    <!--class name="testCases.TC001_BookNowTest"/-->
-  <!--class name="testCases.TC002_SubmitMessageTest"/-->
-     <!--class name="testCases.TC004_SubmitDDT"/-->
-     <!--class name="testCases.TC003_NegativeSubmitMessageTest"/-->
-     <!--class name="testCases.TC005_NegativeBookNowTest"/ -->
-     <!--class name="testCases.TC006_HappyDaysTest"/ -->
-     <!--class name="testCases.TC007_NonFunctionalTest"/ -->
-     <!--class name="testCases.TC008_NonFunctionalResizeTest"/ -->
      <class name="testCase.TC001_LoginTest"/>
      <class name="testCase.TC002_ProductCheckOutTest"/>
      <class name="testCase.TC003_NonFunctionalTest"/>

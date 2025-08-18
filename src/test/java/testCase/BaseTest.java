@@ -137,29 +137,11 @@ public class BaseTest {
         new Actions(driver).moveToElement(target).perform();
     }
 
-    /* Date formatter */
-    public String makeDate(int daysFromToday) {
-        LocalDate date = LocalDate.now().plusDays(daysFromToday);
-        DateTimeFormatter f = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        return date.format(f);
-    }
-
-    /* Method for randomFutureDate */
-    public String randomFutureDate(int minDaysFromToday, int maxDaysFromToday) {
-        if (minDaysFromToday < 0 || maxDaysFromToday < minDaysFromToday) {
-            throw new IllegalArgumentException("Check your day-offset range");
-        }
-
-        long randomDays = ThreadLocalRandom.current().nextLong(minDaysFromToday, maxDaysFromToday + 1);
-        LocalDate date = LocalDate.now().plusDays(randomDays);
-        final DateTimeFormatter DD_MM_YYYY = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        return date.format(DD_MM_YYYY);
-    }
-
     /* Method for resize windows */
     public void resizeWindow(int width, int height) {
         driver.manage().window().setSize(new Dimension(width, height));
     }
+    
     /*Method defined below to slowdown the test automation execution intentionally,
      *to make user friendly test execution, can be definitely removed if this test execution is being done in CI/CD */
     
