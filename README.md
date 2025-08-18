@@ -120,7 +120,7 @@ saucedemo-automation/
 
 * Verifies **page load time** is within **3 seconds**
 * Marks test as failed if threshold is exceeded
-***Delibertaly slowdown method** is used to delay the test execution for better view to users, **can be removed when running in CI/CD or in headless mode**
+* **Delibertaly slowdown method** is used to delay the test execution for better view to users, **can be removed when running in CI/CD or in headless mode**
 ---
 
 ## 🔧 Sample TestNG.xml
