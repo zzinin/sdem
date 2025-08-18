@@ -34,7 +34,7 @@ saucedemo-automation/
 ├── target/
 │   ├── ExtentReports/             # Extent HTML reports
 │   └── test-output/               # Default TestNG reports
-│── .github/workflows              # Plan to run the test via "Action" in "Github" when new code is pushed to Master     
+│── .github/workflows              # Plan to run the test via "Actions" in "Github" when new code is pushed to Master     
 │── .gitignore                     # To keep the repository clean, secure
 ```
 
@@ -120,7 +120,7 @@ saucedemo-automation/
 
 * Verifies **page load time** is within **3 seconds**
 * Marks test as failed if threshold is exceeded
-
+***Delibertaly slowdown method** is used to delay the test execution for better view to users, **can be removed when running in CI/CD or in headless mode**
 ---
 
 ## 🔧 Sample TestNG.xml
