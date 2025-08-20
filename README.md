@@ -160,7 +160,7 @@ saucedemo-automation/
 
 ---
 
-👨‍💻 **Author**: RAHUL RANJAN 
+👨‍💻 **Author**: RR 
 📧 Reach out for collaboration or suggestions!
 
 
