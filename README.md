@@ -55,7 +55,7 @@ saucedemo-automation/
 1. **Clone the Repository**
 
    ```bash
-   git clone [https://github.com/zzinin/sdem.git]
+   git clone https://github.com/zzinin/sdem.git
    
    ```
 
